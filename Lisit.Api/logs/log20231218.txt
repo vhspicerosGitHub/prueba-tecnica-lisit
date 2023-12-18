@@ -378,3 +378,16 @@ Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/
 2023-12-18 20:38:58.345 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7216/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 163.2851ms
 2023-12-18 20:38:58.601 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7216/swagger/v1/swagger.json - -
 2023-12-18 20:38:59.083 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7216/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 482.1034ms
+2023-12-18 20:40:35.538 -03:00 [INF] Now listening on: https://localhost:7216
+2023-12-18 20:40:35.597 -03:00 [INF] Now listening on: http://localhost:5216
+2023-12-18 20:40:35.605 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-12-18 20:40:35.607 -03:00 [INF] Hosting environment: Development
+2023-12-18 20:40:35.608 -03:00 [INF] Content root path: C:\vhspiceros\github\prueba-tecnica-lisit\Lisit.Api\
+2023-12-18 20:40:36.434 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7216/swagger/index.html - -
+2023-12-18 20:40:37.331 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7216/swagger/index.html - - - 200 - text/html;charset=utf-8 903.0623ms
+2023-12-18 20:40:37.404 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7216/_framework/aspnetcore-browser-refresh.js - -
+2023-12-18 20:40:37.418 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7216/_framework/aspnetcore-browser-refresh.js - - - 200 11988 application/javascript;+charset=utf-8 14.1819ms
+2023-12-18 20:40:37.465 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7216/_vs/browserLink - -
+2023-12-18 20:40:37.552 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7216/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 87.0056ms
+2023-12-18 20:40:37.719 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7216/swagger/v1/swagger.json - -
+2023-12-18 20:40:37.955 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7216/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 235.7202ms

@@ -43,4 +43,4 @@ msbuild.err
 msbuild.wrn
 
 #logs
-NetCoreDemoApi.Web/logs/
+Lisit.Api/logs/
