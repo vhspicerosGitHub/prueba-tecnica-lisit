@@ -1,11 +1,9 @@
-﻿using Lisit.Models.Base;
-using System.Diagnostics.CodeAnalysis;
+﻿using System.Diagnostics.CodeAnalysis;
+using Lisit.Models.Base;
 
-namespace Lisit.Model
-{
+namespace Lisit.Models {
     [ExcludeFromCodeCoverage]
-    public class Comuna : NamedObject
-    {
+    public class Comuna : NamedObject {
         public int RegionId { set; get; }
     }
 }

@@ -1,7 +1,5 @@
-﻿namespace Lisit.Services.Interfaces.Base
-{
-    public interface IBaseCrudServices<T>
-    {
+﻿namespace Lisit.Services.Interfaces.Base {
+    public interface IBaseCrudServices<T> {
         Task<IEnumerable<T>> GetAll();
 
         Task<T?> GetById(int id);

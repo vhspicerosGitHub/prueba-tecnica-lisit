@@ -1,13 +1,10 @@
-using Serilog;
-using Lisit.Repositories.Interfaces.Base;
+using Lisit.Repositories.Interfaces;
 using Lisit.Repositories.SqlLiteRepositories;
 using Lisit.Services;
-using Lisit.Model;
-using Lisit.Services.Interfaces.Base;
 using Lisit.Services.Interfaces;
+using Serilog;
 
-try
-{
+try {
     var builder = WebApplication.CreateBuilder(args);
 
     //builder.Host.UseSerilog();  // Add SeriLog
@@ -36,8 +33,7 @@ try
     var app = builder.Build();
 
     // Configure the HTTP request pipeline.
-    if (app.Environment.IsDevelopment())
-    {
+    if (app.Environment.IsDevelopment()) {
         app.UseSwagger();
         app.UseSwaggerUI();
     }
@@ -50,12 +46,8 @@ try
     app.MapControllers();
 
     app.Run();
-}
-catch (Exception ex)
-{
+} catch (Exception ex) {
     Log.Fatal(ex, "Application terminated unexpectedly");
-}
-finally
-{
+} finally {
     Log.CloseAndFlush();
 }

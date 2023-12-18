@@ -1,8 +1,6 @@
-﻿using Lisit.Model;
+﻿using Lisit.Models;
 
-namespace Lisit.Services.Interfaces
-{
-    public interface IRegionServices: Base.IBaseCrudServices<Region>
-    {
+namespace Lisit.Services.Interfaces {
+    public interface IRegionServices : Base.IBaseCrudServices<Region> {
     }
 }

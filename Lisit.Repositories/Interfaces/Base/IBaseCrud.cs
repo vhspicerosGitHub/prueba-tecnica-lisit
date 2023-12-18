@@ -1,7 +1,5 @@
-﻿namespace Lisit.Repositories.Interfaces.Base
-{
-    public interface IBaseCrudRepository<T>
-    {
+﻿namespace Lisit.Repositories.Interfaces.Base {
+    public interface IBaseCrudRepository<T> {
         Task<IEnumerable<T>> GetAll();
 
         Task<T?> GetById(int id);

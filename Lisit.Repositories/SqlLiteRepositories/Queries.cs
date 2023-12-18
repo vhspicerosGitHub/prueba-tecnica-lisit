@@ -1,10 +1,7 @@
-﻿namespace Lisit.Repositories.SqlLiteRepositories
-{
+﻿namespace Lisit.Repositories.SqlLiteRepositories {
 
-    internal class Queries
-    {
-        internal class Pais
-        {
+    internal class Queries {
+        internal class Pais {
             private static readonly string table = "Paises";
 
             public static readonly string GetAll = $"SELECT id,nombre from {table}";
@@ -21,8 +18,7 @@
             public static readonly string Update = $"UPDATE {table} SET nombre = @nombre where id = @id";
         }
 
-        internal class Region
-        {
+        internal class Region {
             private static readonly string table = "Regiones";
 
             public static readonly string GetAll = $"SELECT id,nombre, pais_id as paisId from {table}";
@@ -39,8 +35,7 @@
             public static readonly string Update = $"UPDATE {table} SET nombre = @nombre , pais_id= @pais_id where id = @id";
         }
 
-        internal class Comuna
-        {
+        internal class Comuna {
             private static readonly string table = "Comunas";
 
             public static readonly string GetAll = $"SELECT id,nombre, region_id as regionId from {table}";
