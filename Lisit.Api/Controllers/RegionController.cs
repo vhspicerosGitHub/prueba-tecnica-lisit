@@ -1,5 +1,4 @@
-﻿using Lisit.Common;
-using Lisit.Model;
+﻿using Lisit.Model;
 using Lisit.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
