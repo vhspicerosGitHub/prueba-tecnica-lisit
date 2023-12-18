@@ -1,5 +1,4 @@
-﻿using Lisit.Common;
-using Lisit.Model;
+﻿using Lisit.Model;
 using Lisit.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
@@ -22,61 +21,35 @@ namespace Lisit.Api.Controllers
         [ProducesResponseType(typeof(IEnumerable<Comuna>), 200)]
         public async Task<IActionResult> Get()
         {
-            try
-            {
-                var test = User.Identity?.Name;
-                return Ok(await _service.GetAll());
-            }
-            catch (BusinessException e)
-            {
-                _logger.LogError(e, e.Message);
-                return StatusCode((int)e.HttpStatusCode, e.Message);
-            }
-            catch (Exception e)
-            {
-                _logger.LogError(e, e.Message);
-                return BadRequest(e.Message);
-            }
+            return Ok(await _service.GetAll());
         }
 
         [HttpGet("{id:int}")]
         [ProducesResponseType(typeof(Comuna), 200)]
         public async Task<IActionResult> GetById(int id)
         {
-            try
-            {
-                return Ok(await _service.GetById(id));
-            }
-            catch (BusinessException e)
-            {
-                _logger.LogError(e, e.Message);
-                return StatusCode((int)e.HttpStatusCode, e.Message);
-            }
-            catch (Exception e)
-            {
-                _logger.LogError(e, e.Message);
-                return BadRequest(e.Message);
-            }
+            return Ok(await _service.GetById(id));
         }
 
         [HttpPost()]
         [ProducesResponseType(typeof(int), 200)]
         public async Task<IActionResult> Create(Comuna comuna)
         {
-            try
-            {
-                return Ok(await _service.Create(comuna));
-            }
-            catch (BusinessException e)
-            {
-                _logger.LogError(e, e.Message);
-                return StatusCode((int)e.HttpStatusCode, e.Message);
-            }
-            catch (Exception e)
-            {
-                _logger.LogError(e, e.Message);
-                return BadRequest(e.Message);
-            }
+            return Ok(await _service.Create(comuna));
+        }
+
+        [HttpDelete("{id:int}")]
+        public async Task<IActionResult> Delete(int id)
+        {
+            await _service.Delete(id);
+            return Ok();
+        }
+
+        [HttpPut("{id:int}")]
+        public async Task<IActionResult> Update(Comuna comuna)
+        {
+            await _service.Update(comuna);
+            return Ok();
         }
     }
 }

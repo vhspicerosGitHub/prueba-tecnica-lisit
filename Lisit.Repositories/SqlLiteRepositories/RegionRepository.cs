@@ -1,31 +1,46 @@
-﻿using Lisit.Model;
+﻿using Dapper;
+using Lisit.Model;
+using Lisit.Repositories.Base;
 using Lisit.Repositories.Interfaces.Base;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
+using queries = Lisit.Repositories.SqlLiteRepositories.Queries.Region;
 
 namespace Lisit.Repositories.SqlLiteRepositories;
-public class RegionRepository : IRegionRepository
+public class RegionRepository : BaseRepository, IRegionRepository
 {
-    public Task<int> Create(Pais obj)
+
+    private readonly ILogger<BaseRepository> _logger;
+
+
+    public RegionRepository(IConfiguration configuration, ILogger<PaisRepository> logger) : base(configuration)
     {
-        throw new NotImplementedException();
+        this._logger = logger;
     }
 
-    public Task Delete(Pais Obj)
+    public async Task<int> Create(Region obj)
     {
-        throw new NotImplementedException();
+        return await GetConnection().ExecuteScalarAsync<int>(queries.Create, new { nombre = obj.Nombre, paisId = obj.PaisId });
     }
 
-    public Task<IEnumerable<Pais>> GetAll()
+    public async Task Delete(int id)
     {
-        throw new NotImplementedException();
+        _ = await GetConnection().ExecuteAsync(queries.Delete, new { id });
     }
 
-    public Task<Pais?> GetById(int id)
+    public async Task<IEnumerable<Region>> GetAll()
     {
-        throw new NotImplementedException();
+        return await GetConnection().QueryAsync<Region>(queries.GetAll);
     }
 
-    public Task Update(Pais obj)
+    public async Task<Region?> GetById(int id)
     {
-        throw new NotImplementedException();
+        return await GetConnection().QueryFirstOrDefaultAsync<Region>(queries.GetById, new { id });
+    }
+
+    public async Task Update(Region obj)
+    {
+        _ = await GetConnection().ExecuteAsync(queries.Update,
+                new { id = obj.Id, nombre = obj.Nombre, paisId = obj.PaisId });
     }
 }

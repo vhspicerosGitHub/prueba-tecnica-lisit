@@ -171,3 +171,210 @@ System.InvalidOperationException: Unable to resolve service for type 'Lisit.Serv
 2023-12-18 17:47:34.425 -03:00 [INF] Executed action Lisit.Api.Controllers.PaisController.Get (Lisit.Api) in 647.2817ms
 2023-12-18 17:47:34.444 -03:00 [INF] Executed endpoint 'Lisit.Api.Controllers.PaisController.Get (Lisit.Api)'
 2023-12-18 17:47:34.447 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7216/api/Pais - - - 200 - application/json;+charset=utf-8 810.5968ms
+2023-12-18 20:28:04.652 -03:00 [INF] Now listening on: https://localhost:7216
+2023-12-18 20:28:04.824 -03:00 [INF] Now listening on: http://localhost:5216
+2023-12-18 20:28:04.853 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-12-18 20:28:04.858 -03:00 [INF] Hosting environment: Development
+2023-12-18 20:28:04.861 -03:00 [INF] Content root path: C:\vhspiceros\github\prueba-tecnica-lisit\Lisit.Api\
+2023-12-18 20:28:06.152 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7216/swagger/index.html - -
+2023-12-18 20:28:07.338 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7216/swagger/index.html - - - 200 - text/html;charset=utf-8 1195.4619ms
+2023-12-18 20:28:07.355 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7216/_vs/browserLink - -
+2023-12-18 20:28:07.356 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7216/_framework/aspnetcore-browser-refresh.js - -
+2023-12-18 20:28:07.434 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7216/_framework/aspnetcore-browser-refresh.js - - - 200 11988 application/javascript;+charset=utf-8 78.1013ms
+2023-12-18 20:28:07.564 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7216/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 208.4089ms
+2023-12-18 20:28:07.808 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7216/swagger/v1/swagger.json - -
+2023-12-18 20:28:08.231 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7216/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 423.8818ms
+2023-12-18 20:28:15.792 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7216/api/Pais - -
+2023-12-18 20:28:15.815 -03:00 [INF] Executing endpoint 'Lisit.Api.Controllers.PaisController.Get (Lisit.Api)'
+2023-12-18 20:28:15.883 -03:00 [INF] Route matched with {action = "Get", controller = "Pais"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get() on controller Lisit.Api.Controllers.PaisController (Lisit.Api).
+2023-12-18 20:28:16.377 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Lisit.Model.Pais, Lisit.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-12-18 20:28:16.411 -03:00 [INF] Executed action Lisit.Api.Controllers.PaisController.Get (Lisit.Api) in 513.6343ms
+2023-12-18 20:28:16.423 -03:00 [INF] Executed endpoint 'Lisit.Api.Controllers.PaisController.Get (Lisit.Api)'
+2023-12-18 20:28:16.424 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7216/api/Pais - - - 200 - application/json;+charset=utf-8 632.8055ms
+2023-12-18 20:28:34.850 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7216/api/Region/3 - -
+2023-12-18 20:28:34.853 -03:00 [INF] Executing endpoint 'Lisit.Api.Controllers.RegionController.GetById (Lisit.Api)'
+2023-12-18 20:28:34.880 -03:00 [INF] Route matched with {action = "GetById", controller = "Region"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(Int32) on controller Lisit.Api.Controllers.RegionController (Lisit.Api).
+2023-12-18 20:28:35.000 -03:00 [INF] Executing OkObjectResult, writing value of type 'Lisit.Model.Region'.
+2023-12-18 20:28:35.003 -03:00 [INF] Executed action Lisit.Api.Controllers.RegionController.GetById (Lisit.Api) in 119.6111ms
+2023-12-18 20:28:35.005 -03:00 [INF] Executed endpoint 'Lisit.Api.Controllers.RegionController.GetById (Lisit.Api)'
+2023-12-18 20:28:35.008 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7216/api/Region/3 - - - 200 - application/json;+charset=utf-8 157.9898ms
+2023-12-18 20:29:14.202 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7216/api/Pais/3 - -
+2023-12-18 20:29:14.213 -03:00 [INF] Executing endpoint 'Lisit.Api.Controllers.PaisController.GetById (Lisit.Api)'
+2023-12-18 20:29:14.218 -03:00 [INF] Route matched with {action = "GetById", controller = "Pais"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(Int32) on controller Lisit.Api.Controllers.PaisController (Lisit.Api).
+2023-12-18 20:29:14.225 -03:00 [INF] Executing OkObjectResult, writing value of type 'Lisit.Model.Pais'.
+2023-12-18 20:29:14.228 -03:00 [INF] Executed action Lisit.Api.Controllers.PaisController.GetById (Lisit.Api) in 6.9499ms
+2023-12-18 20:29:14.232 -03:00 [INF] Executed endpoint 'Lisit.Api.Controllers.PaisController.GetById (Lisit.Api)'
+2023-12-18 20:29:14.235 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7216/api/Pais/3 - - - 200 - application/json;+charset=utf-8 33.4133ms
+2023-12-18 20:29:33.856 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7216/api/Pais application/json 38
+2023-12-18 20:29:33.859 -03:00 [INF] Executing endpoint 'Lisit.Api.Controllers.PaisController.Create (Lisit.Api)'
+2023-12-18 20:29:33.865 -03:00 [INF] Route matched with {action = "Create", controller = "Pais"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(Lisit.Model.Pais) on controller Lisit.Api.Controllers.PaisController (Lisit.Api).
+2023-12-18 20:29:33.914 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Int32'.
+2023-12-18 20:29:33.924 -03:00 [INF] Executed action Lisit.Api.Controllers.PaisController.Create (Lisit.Api) in 55.8302ms
+2023-12-18 20:29:33.927 -03:00 [INF] Executed endpoint 'Lisit.Api.Controllers.PaisController.Create (Lisit.Api)'
+2023-12-18 20:29:33.931 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7216/api/Pais application/json 38 - 200 - application/json;+charset=utf-8 74.9568ms
+2023-12-18 20:29:43.922 -03:00 [INF] Request starting HTTP/2 DELETE https://localhost:7216/api/Pais/4 - -
+2023-12-18 20:29:43.924 -03:00 [INF] Executing endpoint 'Lisit.Api.Controllers.PaisController.Delete (Lisit.Api)'
+2023-12-18 20:29:43.930 -03:00 [INF] Route matched with {action = "Delete", controller = "Pais"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Delete(Int32) on controller Lisit.Api.Controllers.PaisController (Lisit.Api).
+2023-12-18 20:29:43.954 -03:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2023-12-18 20:29:43.959 -03:00 [INF] Executed action Lisit.Api.Controllers.PaisController.Delete (Lisit.Api) in 24.4533ms
+2023-12-18 20:29:43.963 -03:00 [INF] Executed endpoint 'Lisit.Api.Controllers.PaisController.Delete (Lisit.Api)'
+2023-12-18 20:29:43.964 -03:00 [INF] Request finished HTTP/2 DELETE https://localhost:7216/api/Pais/4 - - - 200 0 - 42.6546ms
+2023-12-18 20:29:51.792 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7216/api/Pais - -
+2023-12-18 20:29:51.795 -03:00 [INF] Executing endpoint 'Lisit.Api.Controllers.PaisController.Get (Lisit.Api)'
+2023-12-18 20:29:51.798 -03:00 [INF] Route matched with {action = "Get", controller = "Pais"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get() on controller Lisit.Api.Controllers.PaisController (Lisit.Api).
+2023-12-18 20:29:51.802 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Lisit.Model.Pais, Lisit.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-12-18 20:29:51.804 -03:00 [INF] Executed action Lisit.Api.Controllers.PaisController.Get (Lisit.Api) in 1.9573ms
+2023-12-18 20:29:51.805 -03:00 [INF] Executed endpoint 'Lisit.Api.Controllers.PaisController.Get (Lisit.Api)'
+2023-12-18 20:29:51.806 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7216/api/Pais - - - 200 - application/json;+charset=utf-8 14.4665ms
+2023-12-18 20:30:48.027 -03:00 [INF] Now listening on: https://localhost:7216
+2023-12-18 20:30:48.089 -03:00 [INF] Now listening on: http://localhost:5216
+2023-12-18 20:30:48.098 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-12-18 20:30:48.100 -03:00 [INF] Hosting environment: Development
+2023-12-18 20:30:48.101 -03:00 [INF] Content root path: C:\vhspiceros\github\prueba-tecnica-lisit\Lisit.Api\
+2023-12-18 20:30:48.971 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7216/swagger/index.html - -
+2023-12-18 20:30:49.929 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7216/swagger/index.html - - - 200 - text/html;charset=utf-8 967.9050ms
+2023-12-18 20:30:50.002 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7216/_framework/aspnetcore-browser-refresh.js - -
+2023-12-18 20:30:50.003 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7216/_vs/browserLink - -
+2023-12-18 20:30:50.027 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7216/_framework/aspnetcore-browser-refresh.js - - - 200 11988 application/javascript;+charset=utf-8 24.6221ms
+2023-12-18 20:30:50.242 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7216/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 238.4466ms
+2023-12-18 20:30:50.341 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7216/swagger/v1/swagger.json - -
+2023-12-18 20:30:50.818 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7216/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 476.9505ms
+2023-12-18 20:31:12.736 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7216/api/Region - -
+2023-12-18 20:31:12.767 -03:00 [INF] Executing endpoint 'Lisit.Api.Controllers.RegionController.Get (Lisit.Api)'
+2023-12-18 20:31:12.836 -03:00 [INF] Route matched with {action = "Get", controller = "Region"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get() on controller Lisit.Api.Controllers.RegionController (Lisit.Api).
+2023-12-18 20:31:13.302 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Lisit.Model.Region, Lisit.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-12-18 20:31:13.329 -03:00 [INF] Executed action Lisit.Api.Controllers.RegionController.Get (Lisit.Api) in 478.3617ms
+2023-12-18 20:31:13.342 -03:00 [INF] Executed endpoint 'Lisit.Api.Controllers.RegionController.Get (Lisit.Api)'
+2023-12-18 20:31:13.346 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7216/api/Region - - - 200 - application/json;+charset=utf-8 609.8279ms
+2023-12-18 20:31:25.786 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7216/api/Region/3 - -
+2023-12-18 20:31:25.789 -03:00 [INF] Executing endpoint 'Lisit.Api.Controllers.RegionController.GetById (Lisit.Api)'
+2023-12-18 20:31:25.822 -03:00 [INF] Route matched with {action = "GetById", controller = "Region"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(Int32) on controller Lisit.Api.Controllers.RegionController (Lisit.Api).
+2023-12-18 20:32:10.803 -03:00 [INF] Now listening on: https://localhost:7216
+2023-12-18 20:32:11.098 -03:00 [INF] Now listening on: http://localhost:5216
+2023-12-18 20:32:11.117 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-12-18 20:32:11.137 -03:00 [INF] Hosting environment: Development
+2023-12-18 20:32:11.139 -03:00 [INF] Content root path: C:\vhspiceros\github\prueba-tecnica-lisit\Lisit.Api\
+2023-12-18 20:32:12.041 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7216/swagger/index.html - -
+2023-12-18 20:32:12.884 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7216/swagger/index.html - - - 200 - text/html;charset=utf-8 852.2256ms
+2023-12-18 20:32:12.948 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7216/_vs/browserLink - -
+2023-12-18 20:32:12.951 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7216/_framework/aspnetcore-browser-refresh.js - -
+2023-12-18 20:32:12.973 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7216/_framework/aspnetcore-browser-refresh.js - - - 200 11988 application/javascript;+charset=utf-8 24.0858ms
+2023-12-18 20:32:13.105 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7216/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 156.8327ms
+2023-12-18 20:32:13.316 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7216/swagger/v1/swagger.json - -
+2023-12-18 20:32:13.653 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7216/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 337.3171ms
+2023-12-18 20:32:54.951 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7216/api/Region/3 - -
+2023-12-18 20:32:54.975 -03:00 [INF] Executing endpoint 'Lisit.Api.Controllers.RegionController.GetById (Lisit.Api)'
+2023-12-18 20:32:55.076 -03:00 [INF] Route matched with {action = "GetById", controller = "Region"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(Int32) on controller Lisit.Api.Controllers.RegionController (Lisit.Api).
+2023-12-18 20:32:55.676 -03:00 [INF] Executing OkObjectResult, writing value of type 'Lisit.Model.Region'.
+2023-12-18 20:32:55.708 -03:00 [INF] Executed action Lisit.Api.Controllers.RegionController.GetById (Lisit.Api) in 613.7495ms
+2023-12-18 20:32:55.720 -03:00 [INF] Executed endpoint 'Lisit.Api.Controllers.RegionController.GetById (Lisit.Api)'
+2023-12-18 20:32:55.723 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7216/api/Region/3 - - - 200 - application/json;+charset=utf-8 772.4621ms
+2023-12-18 20:33:14.260 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7216/api/Region application/json 54
+2023-12-18 20:33:14.271 -03:00 [INF] Executing endpoint 'Lisit.Api.Controllers.RegionController.Create (Lisit.Api)'
+2023-12-18 20:33:14.279 -03:00 [INF] Route matched with {action = "Create", controller = "Region"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(Lisit.Model.Region) on controller Lisit.Api.Controllers.RegionController (Lisit.Api).
+2023-12-18 20:33:14.361 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Int32'.
+2023-12-18 20:33:14.375 -03:00 [INF] Executed action Lisit.Api.Controllers.RegionController.Create (Lisit.Api) in 91.9608ms
+2023-12-18 20:33:14.378 -03:00 [INF] Executed endpoint 'Lisit.Api.Controllers.RegionController.Create (Lisit.Api)'
+2023-12-18 20:33:14.380 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7216/api/Region application/json 54 - 200 - application/json;+charset=utf-8 122.4868ms
+2023-12-18 20:33:22.519 -03:00 [INF] Request starting HTTP/2 DELETE https://localhost:7216/api/Region/4 - -
+2023-12-18 20:33:22.524 -03:00 [INF] Executing endpoint 'Lisit.Api.Controllers.RegionController.Delete (Lisit.Api)'
+2023-12-18 20:33:22.531 -03:00 [INF] Route matched with {action = "Delete", controller = "Region"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Delete(Int32) on controller Lisit.Api.Controllers.RegionController (Lisit.Api).
+2023-12-18 20:33:22.560 -03:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2023-12-18 20:33:22.567 -03:00 [INF] Executed action Lisit.Api.Controllers.RegionController.Delete (Lisit.Api) in 33.1429ms
+2023-12-18 20:33:22.575 -03:00 [INF] Executed endpoint 'Lisit.Api.Controllers.RegionController.Delete (Lisit.Api)'
+2023-12-18 20:33:22.577 -03:00 [INF] Request finished HTTP/2 DELETE https://localhost:7216/api/Region/4 - - - 200 0 - 58.6885ms
+2023-12-18 20:33:30.412 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7216/api/Region - -
+2023-12-18 20:33:30.415 -03:00 [INF] Executing endpoint 'Lisit.Api.Controllers.RegionController.Get (Lisit.Api)'
+2023-12-18 20:33:30.420 -03:00 [INF] Route matched with {action = "Get", controller = "Region"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get() on controller Lisit.Api.Controllers.RegionController (Lisit.Api).
+2023-12-18 20:33:30.437 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Lisit.Model.Region, Lisit.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-12-18 20:33:30.444 -03:00 [INF] Executed action Lisit.Api.Controllers.RegionController.Get (Lisit.Api) in 21.5272ms
+2023-12-18 20:33:30.450 -03:00 [INF] Executed endpoint 'Lisit.Api.Controllers.RegionController.Get (Lisit.Api)'
+2023-12-18 20:33:30.452 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7216/api/Region - - - 200 - application/json;+charset=utf-8 39.6341ms
+2023-12-18 20:33:47.618 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7216/api/Comuna - -
+2023-12-18 20:33:47.620 -03:00 [INF] Executing endpoint 'Lisit.Api.Controllers.ComunaController.Get (Lisit.Api)'
+2023-12-18 20:33:47.625 -03:00 [INF] Route matched with {action = "Get", controller = "Comuna"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get() on controller Lisit.Api.Controllers.ComunaController (Lisit.Api).
+2023-12-18 20:33:47.642 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Lisit.Model.Comuna, Lisit.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-12-18 20:33:47.645 -03:00 [INF] Executed action Lisit.Api.Controllers.ComunaController.Get (Lisit.Api) in 7.4336ms
+2023-12-18 20:33:47.650 -03:00 [INF] Executed endpoint 'Lisit.Api.Controllers.ComunaController.Get (Lisit.Api)'
+2023-12-18 20:33:47.652 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7216/api/Comuna - - - 200 - application/json;+charset=utf-8 34.5858ms
+2023-12-18 20:33:55.268 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7216/api/Comuna/1 - -
+2023-12-18 20:33:55.272 -03:00 [INF] Executing endpoint 'Lisit.Api.Controllers.ComunaController.GetById (Lisit.Api)'
+2023-12-18 20:33:55.278 -03:00 [INF] Route matched with {action = "GetById", controller = "Comuna"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(Int32) on controller Lisit.Api.Controllers.ComunaController (Lisit.Api).
+2023-12-18 20:33:55.284 -03:00 [INF] Executing OkObjectResult, writing value of type 'Lisit.Model.Comuna'.
+2023-12-18 20:33:55.288 -03:00 [INF] Executed action Lisit.Api.Controllers.ComunaController.GetById (Lisit.Api) in 6.7126ms
+2023-12-18 20:33:55.291 -03:00 [INF] Executed endpoint 'Lisit.Api.Controllers.ComunaController.GetById (Lisit.Api)'
+2023-12-18 20:33:55.293 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7216/api/Comuna/1 - - - 200 - application/json;+charset=utf-8 26.0997ms
+2023-12-18 20:34:21.594 -03:00 [INF] Now listening on: https://localhost:7216
+2023-12-18 20:34:21.664 -03:00 [INF] Now listening on: http://localhost:5216
+2023-12-18 20:34:21.672 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-12-18 20:34:21.674 -03:00 [INF] Hosting environment: Development
+2023-12-18 20:34:21.677 -03:00 [INF] Content root path: C:\vhspiceros\github\prueba-tecnica-lisit\Lisit.Api\
+2023-12-18 20:34:22.433 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7216/swagger/index.html - -
+2023-12-18 20:34:23.399 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7216/swagger/index.html - - - 200 - text/html;charset=utf-8 978.1826ms
+2023-12-18 20:34:23.440 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7216/_framework/aspnetcore-browser-refresh.js - -
+2023-12-18 20:34:23.481 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7216/_vs/browserLink - -
+2023-12-18 20:34:23.599 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7216/_framework/aspnetcore-browser-refresh.js - - - 200 11988 application/javascript;+charset=utf-8 158.9932ms
+2023-12-18 20:34:23.763 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7216/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 285.4096ms
+2023-12-18 20:34:23.961 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7216/swagger/v1/swagger.json - -
+2023-12-18 20:34:24.396 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7216/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 435.7190ms
+2023-12-18 20:35:11.424 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7216/api/Comuna - -
+2023-12-18 20:35:11.440 -03:00 [INF] Executing endpoint 'Lisit.Api.Controllers.ComunaController.Get (Lisit.Api)'
+2023-12-18 20:35:11.520 -03:00 [INF] Route matched with {action = "Get", controller = "Comuna"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get() on controller Lisit.Api.Controllers.ComunaController (Lisit.Api).
+2023-12-18 20:35:12.003 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Lisit.Model.Comuna, Lisit.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-12-18 20:35:12.051 -03:00 [INF] Executed action Lisit.Api.Controllers.ComunaController.Get (Lisit.Api) in 511.9938ms
+2023-12-18 20:35:12.067 -03:00 [INF] Executed endpoint 'Lisit.Api.Controllers.ComunaController.Get (Lisit.Api)'
+2023-12-18 20:35:12.072 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7216/api/Comuna - - - 200 - application/json;+charset=utf-8 649.2217ms
+2023-12-18 20:35:20.944 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7216/api/Comuna/3 - -
+2023-12-18 20:35:20.949 -03:00 [INF] Executing endpoint 'Lisit.Api.Controllers.ComunaController.GetById (Lisit.Api)'
+2023-12-18 20:35:20.985 -03:00 [INF] Route matched with {action = "GetById", controller = "Comuna"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(Int32) on controller Lisit.Api.Controllers.ComunaController (Lisit.Api).
+2023-12-18 20:35:21.074 -03:00 [INF] Executing OkObjectResult, writing value of type 'Lisit.Model.Comuna'.
+2023-12-18 20:35:21.078 -03:00 [INF] Executed action Lisit.Api.Controllers.ComunaController.GetById (Lisit.Api) in 90.485ms
+2023-12-18 20:35:21.083 -03:00 [INF] Executed endpoint 'Lisit.Api.Controllers.ComunaController.GetById (Lisit.Api)'
+2023-12-18 20:35:21.085 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7216/api/Comuna/3 - - - 200 - application/json;+charset=utf-8 140.8548ms
+2023-12-18 20:35:35.536 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7216/api/Region - -
+2023-12-18 20:35:35.541 -03:00 [INF] Executing endpoint 'Lisit.Api.Controllers.RegionController.Get (Lisit.Api)'
+2023-12-18 20:35:35.549 -03:00 [INF] Route matched with {action = "Get", controller = "Region"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get() on controller Lisit.Api.Controllers.RegionController (Lisit.Api).
+2023-12-18 20:35:35.556 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Lisit.Model.Region, Lisit.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-12-18 20:35:35.561 -03:00 [INF] Executed action Lisit.Api.Controllers.RegionController.Get (Lisit.Api) in 8.2138ms
+2023-12-18 20:35:35.564 -03:00 [INF] Executed endpoint 'Lisit.Api.Controllers.RegionController.Get (Lisit.Api)'
+2023-12-18 20:35:35.566 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7216/api/Region - - - 200 - application/json;+charset=utf-8 36.9343ms
+2023-12-18 20:36:24.447 -03:00 [INF] Request starting HTTP/2 PUT https://localhost:7216/api/Comuna/3 application/json 50
+2023-12-18 20:36:24.450 -03:00 [INF] Executing endpoint 'Lisit.Api.Controllers.ComunaController.Update (Lisit.Api)'
+2023-12-18 20:36:24.454 -03:00 [INF] Route matched with {action = "Update", controller = "Comuna"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Update(Lisit.Model.Comuna) on controller Lisit.Api.Controllers.ComunaController (Lisit.Api).
+2023-12-18 20:36:24.522 -03:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2023-12-18 20:36:24.526 -03:00 [INF] Executed action Lisit.Api.Controllers.ComunaController.Update (Lisit.Api) in 68.2456ms
+2023-12-18 20:36:24.528 -03:00 [INF] Executed endpoint 'Lisit.Api.Controllers.ComunaController.Update (Lisit.Api)'
+2023-12-18 20:36:24.534 -03:00 [INF] Request finished HTTP/2 PUT https://localhost:7216/api/Comuna/3 application/json 50 - 200 0 - 87.1988ms
+2023-12-18 20:38:06.814 -03:00 [INF] Now listening on: https://localhost:7216
+2023-12-18 20:38:07.095 -03:00 [INF] Now listening on: http://localhost:5216
+2023-12-18 20:38:07.113 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-12-18 20:38:07.119 -03:00 [INF] Hosting environment: Development
+2023-12-18 20:38:07.121 -03:00 [INF] Content root path: C:\vhspiceros\github\prueba-tecnica-lisit\Lisit.Api\
+2023-12-18 20:38:08.771 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7216/swagger/index.html - -
+2023-12-18 20:38:12.590 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7216/swagger/index.html - - - 200 - text/html;charset=utf-8 3825.7049ms
+2023-12-18 20:38:13.559 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7216/_framework/aspnetcore-browser-refresh.js - -
+2023-12-18 20:38:13.568 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7216/_vs/browserLink - -
+2023-12-18 20:38:13.578 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7216/_framework/aspnetcore-browser-refresh.js - - - 200 11988 application/javascript;+charset=utf-8 19.1031ms
+2023-12-18 20:38:13.862 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7216/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 294.7066ms
+2023-12-18 20:38:13.972 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7216/swagger/v1/swagger.json - -
+2023-12-18 20:38:14.119 -03:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "GET api/Comuna" for actions - Lisit.Api.Controllers.ComunaController.Get (Lisit.Api),Lisit.Api.Controllers.Public.ComunaController.Get (Lisit.Api). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwagger(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-12-18 20:38:14.628 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7216/swagger/v1/swagger.json - - - 500 - text/plain;+charset=utf-8 656.4962ms
+2023-12-18 20:38:56.008 -03:00 [INF] Now listening on: https://localhost:7216
+2023-12-18 20:38:56.082 -03:00 [INF] Now listening on: http://localhost:5216
+2023-12-18 20:38:56.090 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-12-18 20:38:56.092 -03:00 [INF] Hosting environment: Development
+2023-12-18 20:38:56.094 -03:00 [INF] Content root path: C:\vhspiceros\github\prueba-tecnica-lisit\Lisit.Api\
+2023-12-18 20:38:57.117 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7216/swagger/index.html - -
+2023-12-18 20:38:58.127 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7216/swagger/index.html - - - 200 - text/html;charset=utf-8 1018.2843ms
+2023-12-18 20:38:58.182 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7216/_vs/browserLink - -
+2023-12-18 20:38:58.182 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7216/_framework/aspnetcore-browser-refresh.js - -
+2023-12-18 20:38:58.205 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7216/_framework/aspnetcore-browser-refresh.js - - - 200 11988 application/javascript;+charset=utf-8 22.3000ms
+2023-12-18 20:38:58.345 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7216/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 163.2851ms
+2023-12-18 20:38:58.601 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7216/swagger/v1/swagger.json - -
+2023-12-18 20:38:59.083 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7216/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 482.1034ms

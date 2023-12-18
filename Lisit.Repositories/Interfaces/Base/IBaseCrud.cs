@@ -10,6 +10,6 @@
 
         Task Update(T obj);
 
-        Task Delete(T Obj);
+        Task Delete(int id);
     }
 }

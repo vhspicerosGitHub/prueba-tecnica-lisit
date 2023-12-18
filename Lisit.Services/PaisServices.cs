@@ -17,14 +17,14 @@ namespace Lisit.Services
 
         }
 
-        public Task<int> Create(Pais obj)
+        public async Task<int> Create(Pais obj)
         {
-            throw new NotImplementedException();
+            return await _repository.Create(obj);
         }
 
-        public Task Delete(Pais Obj)
+        public async Task Delete(int id)
         {
-            throw new NotImplementedException();
+            await _repository.Delete(id);
         }
 
         public async Task<IEnumerable<Pais>> GetAll()
@@ -37,9 +37,9 @@ namespace Lisit.Services
             return await _repository.GetById(id);
         }
 
-        public Task Update(Pais obj)
+        public async Task Update(Pais obj)
         {
-            throw new NotImplementedException();
+            await _repository.Update(obj);
         }
     }
 

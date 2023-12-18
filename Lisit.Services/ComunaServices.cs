@@ -1,34 +1,45 @@
 ﻿using Lisit.Model;
+using Lisit.Repositories.Interfaces.Base;
 using Lisit.Services.Interfaces;
+using Microsoft.Extensions.Logging;
 
 namespace Lisit.Services
 {
     public class ComunaServices : IComunaServices
-
     {
-        public Task<int> Create(Comuna obj)
+        private readonly IComunaRepository _repository;
+        private readonly ILogger<ComunaServices> _logger;
+
+        
+        public ComunaServices(IComunaRepository repository, ILogger<ComunaServices> logger)
         {
-            throw new NotImplementedException();
+            _repository = repository;
+            _logger = logger;
+
+        }
+        public async Task<int> Create(Comuna obj)
+        {
+            return await _repository.Create(obj);
         }
 
-        public Task Delete(Comuna Obj)
+        public async Task Delete(int id)
         {
-            throw new NotImplementedException();
+            await _repository.Delete(id);
         }
 
-        public Task<IEnumerable<Comuna>> GetAll()
+        public async Task<IEnumerable<Comuna>> GetAll()
         {
-            throw new NotImplementedException();
+            return await _repository.GetAll();
         }
 
-        public Task<Comuna?> GetById(int id)
+        public async Task<Comuna?> GetById(int id)
         {
-            throw new NotImplementedException();
+            return await _repository.GetById(id);
         }
 
-        public Task Update(Comuna obj)
+        public async Task Update(Comuna obj)
         {
-            throw new NotImplementedException();
+            await _repository.Update(obj);
         }
     }
 }

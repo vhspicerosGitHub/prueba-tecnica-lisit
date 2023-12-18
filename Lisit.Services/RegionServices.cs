@@ -1,33 +1,45 @@
 ﻿using Lisit.Model;
+using Lisit.Repositories.Interfaces.Base;
 using Lisit.Services.Interfaces;
+using Microsoft.Extensions.Logging;
 
 namespace Lisit.Services
 {
     public class RegionServices : IRegionServices
     {
-        public Task<int> Create(Region obj)
+
+        private readonly IRegionRepository _repository;
+        private readonly ILogger<RegionServices> _logger;
+
+        public RegionServices(IRegionRepository repository, ILogger<RegionServices> logger)
         {
-            throw new NotImplementedException();
+            _repository = repository;
+            _logger = logger;
+
+        }
+        public async Task<int> Create(Region obj)
+        {
+            return await _repository.Create(obj);
         }
 
-        public Task Delete(Region Obj)
+        public async Task Delete(int id)
         {
-            throw new NotImplementedException();
+            await _repository.Delete(id);
         }
 
-        public Task<IEnumerable<Region>> GetAll()
+        public async Task<IEnumerable<Region>> GetAll()
         {
-            throw new NotImplementedException();
+            return await _repository.GetAll();
         }
 
-        public Task<Region?> GetById(int id)
+        public async Task<Region?> GetById(int id)
         {
-            throw new NotImplementedException();
+            return await _repository.GetById(id);
         }
 
-        public Task Update(Region obj)
+        public async Task Update(Region obj)
         {
-            throw new NotImplementedException();
+            await _repository.Update(obj);
         }
     }
 

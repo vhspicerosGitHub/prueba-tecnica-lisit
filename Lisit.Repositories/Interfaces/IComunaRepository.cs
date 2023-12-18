@@ -2,7 +2,7 @@
 
 namespace Lisit.Repositories.Interfaces.Base
 {
-    public interface IComunaRepository : IBaseCrudRepository<Pais>
+    public interface IComunaRepository : IBaseCrudRepository<Comuna>
     {
 
     }

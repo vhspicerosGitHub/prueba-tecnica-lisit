@@ -1,32 +1,46 @@
-﻿using Lisit.Model;
+﻿using Dapper;
+using Lisit.Model;
+using Lisit.Repositories.Base;
 using Lisit.Repositories.Interfaces.Base;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
+using queries = Lisit.Repositories.SqlLiteRepositories.Queries.Comuna;
 
 namespace Lisit.Repositories.SqlLiteRepositories;
 
-public class ComunaRepository : IComunaRepository
+public class ComunaRepository : BaseRepository, IComunaRepository
 {
-    public Task<int> Create(Pais obj)
+    private readonly ILogger<BaseRepository> _logger;
+
+
+    public ComunaRepository(IConfiguration configuration, ILogger<PaisRepository> logger) : base(configuration)
     {
-        throw new NotImplementedException();
+        this._logger = logger;
     }
 
-    public Task Delete(Pais Obj)
+    public async Task<int> Create(Comuna obj)
     {
-        throw new NotImplementedException();
+        return await GetConnection().ExecuteScalarAsync<int>(queries.Create, new { nombre = obj.Nombre, regionId = obj.RegionId });
     }
 
-    public Task<IEnumerable<Pais>> GetAll()
+    public async Task Delete(int id)
     {
-        throw new NotImplementedException();
+        _ = await GetConnection().ExecuteAsync(queries.Delete, new { id });
     }
 
-    public Task<Pais?> GetById(int id)
+    public async Task<IEnumerable<Comuna>> GetAll()
     {
-        throw new NotImplementedException();
+        return await GetConnection().QueryAsync<Comuna>(queries.GetAll);
     }
 
-    public Task Update(Pais obj)
+    public async Task<Comuna?> GetById(int id)
     {
-        throw new NotImplementedException();
+        return await GetConnection().QueryFirstOrDefaultAsync<Comuna>(queries.GetById, new { id });
+    }
+
+    public async Task Update(Comuna obj)
+    {
+        _ = await GetConnection().ExecuteAsync(queries.Update,
+        new { id = obj.Id, nombre = obj.Nombre, regionId = obj.RegionId });
     }
 }

@@ -2,9 +2,9 @@
 using Lisit.Model;
 using Lisit.Repositories.Base;
 using Lisit.Repositories.Interfaces.Base;
-using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using queries = Lisit.Repositories.SqlLiteRepositories.Queries.Pais;
 
 namespace Lisit.Repositories.SqlLiteRepositories;
 
@@ -13,33 +13,36 @@ public class PaisRepository : BaseRepository, IPaisRepository
 
     private readonly ILogger<BaseRepository> _logger;
 
+
     public PaisRepository(IConfiguration configuration, ILogger<PaisRepository> logger) : base(configuration)
     {
         this._logger = logger;
     }
 
-    public Task<int> Create(Pais obj)
+    public async Task<int> Create(Pais obj)
     {
-        throw new NotImplementedException();
+        return await GetConnection().ExecuteScalarAsync<int>(queries.Create,
+            new { nombre = obj.Nombre });
     }
 
-    public Task Delete(Pais Obj)
+    public async Task Delete(int id)
     {
-        throw new NotImplementedException();
+        _ = await GetConnection().ExecuteAsync(queries.Delete, new { id });
     }
 
     public async Task<IEnumerable<Pais>> GetAll()
     {
-        return await GetConnection().QueryAsync<Pais>(PaisQueries.GetAll);
+        return await GetConnection().QueryAsync<Pais>(queries.GetAll);
     }
 
-    public Task<Pais?> GetById(int id)
+    public async Task<Pais?> GetById(int id)
     {
-        throw new NotImplementedException();
+        return await GetConnection().QueryFirstOrDefaultAsync<Pais>(queries.GetById, new { id });
     }
 
-    public Task Update(Pais obj)
+    public async Task Update(Pais obj)
     {
-        throw new NotImplementedException();
+        _ = await GetConnection().ExecuteAsync(queries.Update,
+                new { id = obj.Id, nombre = obj.Nombre });
     }
 }
