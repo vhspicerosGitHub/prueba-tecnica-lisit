@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32811.315
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{F9449418-2FBC-4E2D-84FB-8261CBFDE86D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lisit.Models", "Lisit.Model\Lisit.Models.csproj", "{ACB60341-CC2B-4F8F-8BED-486F97B6090C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lisit.Services", "Lisit.Services\Lisit.Services.csproj", "{735231AA-323A-4AD3-A8EE-486F43A02FA6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lisit.Repositories", "Lisit.Repositories\Lisit.Repositories.csproj", "{42CB3246-A42F-470F-A1CA-0121C2D254C2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lisit.Api", "Lisit.Api\Lisit.Api.csproj", "{4FBF6863-8257-4D2D-B669-D2960A48EFD8}"
+	ProjectSection(ProjectDependencies) = postProject
+		{735231AA-323A-4AD3-A8EE-486F43A02FA6} = {735231AA-323A-4AD3-A8EE-486F43A02FA6}
+		{ACB60341-CC2B-4F8F-8BED-486F97B6090C} = {ACB60341-CC2B-4F8F-8BED-486F97B6090C}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lisit.Common", "Lisit.Common\Lisit.Common.csproj", "{38F2BD33-DC23-4F80-862E-28F409B9A997}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ACB60341-CC2B-4F8F-8BED-486F97B6090C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACB60341-CC2B-4F8F-8BED-486F97B6090C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACB60341-CC2B-4F8F-8BED-486F97B6090C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACB60341-CC2B-4F8F-8BED-486F97B6090C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{735231AA-323A-4AD3-A8EE-486F43A02FA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{735231AA-323A-4AD3-A8EE-486F43A02FA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{735231AA-323A-4AD3-A8EE-486F43A02FA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{735231AA-323A-4AD3-A8EE-486F43A02FA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42CB3246-A42F-470F-A1CA-0121C2D254C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42CB3246-A42F-470F-A1CA-0121C2D254C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42CB3246-A42F-470F-A1CA-0121C2D254C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42CB3246-A42F-470F-A1CA-0121C2D254C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FBF6863-8257-4D2D-B669-D2960A48EFD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FBF6863-8257-4D2D-B669-D2960A48EFD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FBF6863-8257-4D2D-B669-D2960A48EFD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FBF6863-8257-4D2D-B669-D2960A48EFD8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38F2BD33-DC23-4F80-862E-28F409B9A997}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38F2BD33-DC23-4F80-862E-28F409B9A997}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38F2BD33-DC23-4F80-862E-28F409B9A997}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38F2BD33-DC23-4F80-862E-28F409B9A997}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {41863A12-17E2-4AA1-A400-DB2899394B7B}
+	EndGlobalSection
+EndGlobal
