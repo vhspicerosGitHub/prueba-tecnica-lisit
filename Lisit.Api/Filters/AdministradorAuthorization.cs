@@ -10,7 +10,7 @@ namespace Lisit.Api.Filters {
 
             var user = context.HttpContext.User;
             if (!IsAuthorized(context.HttpContext.User)) {
-                new AuthenticationException("Unauthorized");
+                throw new AuthenticationException("Unauthorized");
             }
         }
         private bool IsAuthorized(ClaimsPrincipal user) {

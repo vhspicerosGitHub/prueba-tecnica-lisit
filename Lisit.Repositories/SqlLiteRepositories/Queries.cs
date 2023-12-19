@@ -6,7 +6,7 @@ internal class Queries {
 
         public static readonly string GetById = $"select id,nombre,email, password,es_administrador as EsAdministrador, comuna_id as comunaId from {table} where id=@id ";
 
-        public static readonly string GetByEmail = $"select id,nombre,email, password,es_administrador as EsAdministrador, comuna_id as comunaId from {table} where email=@email ";
+        public static readonly string GetByEmail = $"select id,nombre,email, password,es_administrador as EsAdministrador, comuna_id as comunaId from {table} where UPPER(email) = UPPER(@email) ";
 
         public static readonly string Create = $@"insert into {table} (nombre,email,password,es_administrador,comuna_id) values (@nombre,@email,@password,@esAdministrador,@comunaId);
                                 SELECT last_insert_rowid();";
