@@ -1,6 +1,9 @@
-﻿using Lisit.Models.Base;
+﻿using System.Diagnostics.CodeAnalysis;
+using Lisit.Models.Base;
 
 namespace Lisit.Models;
+
+[ExcludeFromCodeCoverage]
 public class Usuario : NamedObject {
 
     public string? Email { set; get; }

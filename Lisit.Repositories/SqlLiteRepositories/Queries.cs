@@ -1,4 +1,8 @@
-﻿namespace Lisit.Repositories.SqlLiteRepositories;
+﻿using System.Diagnostics.CodeAnalysis;
+
+namespace Lisit.Repositories.SqlLiteRepositories;
+
+[ExcludeFromCodeCoverage]
 internal class Queries {
     internal class usuarios {
 

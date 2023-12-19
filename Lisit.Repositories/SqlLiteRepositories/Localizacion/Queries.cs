@@ -1,4 +1,8 @@
-﻿namespace Lisit.Repositories.SqlLiteRepositories.Localizacion;
+﻿using System.Diagnostics.CodeAnalysis;
+
+namespace Lisit.Repositories.SqlLiteRepositories.Localizacion;
+
+[ExcludeFromCodeCoverage]
 internal class Queries {
     internal class Pais {
         private static readonly string table = "Paises";
