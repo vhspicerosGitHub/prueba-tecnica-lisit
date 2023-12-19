@@ -33,6 +33,12 @@ CREATE TABLE IF NOT EXISTS  Usuarios(
   FOREIGN KEY(comuna_id) REFERENCES Comunas(id)
 );
 
+CREATE TABLE IF NOT EXISTS  ayuda_social(
+  id    INTEGER PRIMARY KEY AUTOINCREMENT, 
+  nombre   TEXT, 
+  descripcion   TEXT
+);
+
 
 -- INSERT
 insert into paises (nombre) values('Chile');
@@ -51,3 +57,4 @@ insert into comunas(region_id,nombre) values (3,'Puente Alto');
 
 insert into usuarios (nombre,email,password,es_administrador,comuna_id) values ('Victor Hugo Saavedra','vhspiceros@gmail.com','123',1,1);
 insert into usuarios (nombre,email,password,es_administrador,comuna_id) values ('Ema Saavedra','Ema@gmail.com','123',1,1);
+

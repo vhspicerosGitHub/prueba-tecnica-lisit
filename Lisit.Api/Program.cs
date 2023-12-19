@@ -47,6 +47,7 @@ try {
     builder.Services.AddTransient<IComunaRepository, ComunaRepository>();
     builder.Services.AddTransient<IRegionRepository, RegionRepository>();
     builder.Services.AddTransient<IUsuarioRepository, UsuarioRepository>();
+    builder.Services.AddTransient<IAyudaSocialRepository, AyudaSocialRepository>();
 
 
     //  services
@@ -54,6 +55,7 @@ try {
     builder.Services.AddTransient<IRegionServices, RegionServices>();
     builder.Services.AddTransient<IComunaServices, ComunaServices>();
     builder.Services.AddTransient<IAuthServices, AuthServices>();
+    builder.Services.AddTransient<IAyudaSocialServices, AyudaSocialServices>();
 
     var app = builder.Build();
 
