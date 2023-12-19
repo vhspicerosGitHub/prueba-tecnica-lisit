@@ -1,5 +1,5 @@
-﻿using Lisit.Models;
-using Lisit.Services.Interfaces;
+﻿using Lisit.Models.Localizacion;
+using Lisit.Services.Interfaces.Localizacion;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Lisit.Api.Controllers;

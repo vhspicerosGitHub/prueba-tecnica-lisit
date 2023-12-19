@@ -1,12 +1,12 @@
 ﻿using Dapper;
-using Lisit.Models;
-using Lisit.Repositories.Interfaces;
+using Lisit.Models.Localizacion;
+using Lisit.Repositories.Interfaces.Localizacion;
 using Lisit.Repositories.SqlLiteRepositories.Base;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
-using queries = Lisit.Repositories.SqlLiteRepositories.Queries.Comuna;
+using queries = Lisit.Repositories.SqlLiteRepositories.Localizacion.Queries.Comuna;
 
-namespace Lisit.Repositories.SqlLiteRepositories;
+namespace Lisit.Repositories.SqlLiteRepositories.Localizacion;
 
 public class ComunaRepository : BaseRepository, IComunaRepository {
     private readonly ILogger<BaseRepository> _logger;

@@ -1,6 +1,6 @@
 ﻿using System.Net;
 
-namespace Lisit.Common; 
+namespace Lisit.Common;
 public class BusinessException : Exception {
     public HttpStatusCode HttpStatusCode { set; get; }
 

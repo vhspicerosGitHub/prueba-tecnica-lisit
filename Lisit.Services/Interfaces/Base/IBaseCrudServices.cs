@@ -1,4 +1,4 @@
-﻿namespace Lisit.Services.Interfaces.Base; 
+﻿namespace Lisit.Services.Interfaces.Base;
 public interface IBaseCrudServices<T> {
     Task<IEnumerable<T>> GetAll();
 

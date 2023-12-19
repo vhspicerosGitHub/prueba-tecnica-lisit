@@ -1,7 +1,7 @@
 ﻿using Microsoft.Data.Sqlite;
 using Microsoft.Extensions.Configuration;
 
-namespace Lisit.Repositories.SqlLiteRepositories.Base; 
+namespace Lisit.Repositories.SqlLiteRepositories.Base;
 public abstract class BaseRepository {
     protected readonly IConfiguration _configuration;
 

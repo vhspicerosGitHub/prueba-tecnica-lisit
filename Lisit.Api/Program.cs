@@ -1,8 +1,12 @@
 ﻿using System.Text;
 using Lisit.Repositories.Interfaces;
+using Lisit.Repositories.Interfaces.Localizacion;
 using Lisit.Repositories.SqlLiteRepositories;
+using Lisit.Repositories.SqlLiteRepositories.Localizacion;
 using Lisit.Services;
 using Lisit.Services.Interfaces;
+using Lisit.Services.Interfaces.Localizacion;
+using Lisit.Services.Localizacion;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Serilog;

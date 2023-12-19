@@ -1,9 +1,9 @@
-﻿using Lisit.Models;
-using Lisit.Repositories.Interfaces;
-using Lisit.Services.Interfaces;
+﻿using Lisit.Models.Localizacion;
+using Lisit.Repositories.Interfaces.Localizacion;
+using Lisit.Services.Interfaces.Localizacion;
 using Microsoft.Extensions.Logging;
 
-namespace Lisit.Services; 
+namespace Lisit.Services.Localizacion;
 public class RegionServices : IRegionServices {
 
     private readonly IRegionRepository _repository;

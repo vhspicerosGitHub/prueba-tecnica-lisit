@@ -1,12 +1,12 @@
 ﻿using Dapper;
-using Lisit.Models;
-using Lisit.Repositories.Interfaces;
+using Lisit.Models.Localizacion;
+using Lisit.Repositories.Interfaces.Localizacion;
 using Lisit.Repositories.SqlLiteRepositories.Base;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
-using queries = Lisit.Repositories.SqlLiteRepositories.Queries.Region;
+using queries = Lisit.Repositories.SqlLiteRepositories.Localizacion.Queries.Region;
 
-namespace Lisit.Repositories.SqlLiteRepositories;
+namespace Lisit.Repositories.SqlLiteRepositories.Localizacion;
 public class RegionRepository : BaseRepository, IRegionRepository {
 
     private readonly ILogger<BaseRepository> _logger;

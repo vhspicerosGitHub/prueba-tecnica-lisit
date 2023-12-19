@@ -1,12 +1,12 @@
-﻿using Lisit.Common;
-using System.IdentityModel.Tokens.Jwt;
+﻿using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
+using Lisit.Api.ViewModel.Auth;
+using Lisit.Common;
+using Lisit.Models;
 using Lisit.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
-using Lisit.Api.ViewModel.Auth;
-using Lisit.Models;
 
 namespace Lisit.Api.Controllers;
 
