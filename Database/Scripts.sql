@@ -23,6 +23,16 @@ CREATE TABLE IF NOT EXISTS  Comunas(
   FOREIGN KEY(region_id) REFERENCES Regiones(id)
 );
 
+CREATE TABLE IF NOT EXISTS  Usuarios(
+  id    INTEGER PRIMARY KEY AUTOINCREMENT, 
+  nombre   TEXT, 
+  email   TEXT, 
+  password   TEXT, 
+  es_administrador   BOOLEAN,   
+  comuna_id INTEGER,
+  FOREIGN KEY(comuna_id) REFERENCES Comunas(id)
+);
+
 
 -- INSERT
 insert into paises (nombre) values('Chile');
@@ -37,3 +47,7 @@ insert into comunas(region_id,nombre) values (3,'Santiago Centro');
 insert into comunas(region_id,nombre) values (3,'Maipu');
 insert into comunas(region_id,nombre) values (3,'Providencia');
 insert into comunas(region_id,nombre) values (3,'Puente Alto');
+
+
+insert into usuarios (nombre,email,password,es_administrador,comuna_id) values ('Victor Hugo Saavedra','vhspiceros@gmail.com','123',1,1);
+insert into usuarios (nombre,email,password,es_administrador,comuna_id) values ('Ema Saavedra','Ema@gmail.com','123',1,1);
