@@ -12,7 +12,7 @@ public class UsuarioRepository : BaseRepository, IUsuarioRepository {
 
     public async Task<int> Create(Usuario usuario) {
         return await GetConnection().ExecuteScalarAsync<int>(Queries.usuarios.Create,
-            new { nombre = usuario.Nombre, email = usuario.Email, password = usuario.Password, ComunaId = usuario.ComunaId, EsAdministrador = usuario.EsAdministrador }
+            new { nombre = usuario.Nombre, email = usuario.Email, password = usuario.Password, comunaId = usuario.ComunaId, esAdministrador = usuario.EsAdministrador }
             );
     }
 

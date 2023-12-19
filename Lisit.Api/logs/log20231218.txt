@@ -585,3 +585,99 @@ Lisit.Common.BusinessException: User not found
 2023-12-18 21:53:59.623 -03:00 [INF] Executed action Lisit.Api.Controllers.AuthController.Post (Lisit.Api) in 319.1735ms
 2023-12-18 21:53:59.624 -03:00 [INF] Executed endpoint 'Lisit.Api.Controllers.AuthController.Post (Lisit.Api)'
 2023-12-18 21:53:59.627 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7216/api/Auth/Login application/json 58 - 200 - text/plain;+charset=utf-8 356.3458ms
+2023-12-18 22:23:17.316 -03:00 [INF] User profile is available. Using 'C:\Users\vhspi\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-12-18 22:23:18.107 -03:00 [INF] Now listening on: https://localhost:7216
+2023-12-18 22:23:18.109 -03:00 [INF] Now listening on: http://localhost:5216
+2023-12-18 22:23:18.116 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-12-18 22:23:18.118 -03:00 [INF] Hosting environment: Development
+2023-12-18 22:23:18.119 -03:00 [INF] Content root path: C:\vhspiceros\github\prueba-tecnica-lisit\Lisit.Api\
+2023-12-18 22:23:19.781 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7216/swagger/index.html - -
+2023-12-18 22:23:20.681 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7216/swagger/index.html - - - 200 - text/html;charset=utf-8 909.6510ms
+2023-12-18 22:23:20.695 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7216/_framework/aspnetcore-browser-refresh.js - -
+2023-12-18 22:23:20.695 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7216/_vs/browserLink - -
+2023-12-18 22:23:20.742 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7216/_framework/aspnetcore-browser-refresh.js - - - 200 11988 application/javascript;+charset=utf-8 47.8293ms
+2023-12-18 22:23:20.886 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7216/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 191.7559ms
+2023-12-18 22:23:21.028 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7216/swagger/v1/swagger.json - -
+2023-12-18 22:23:21.337 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7216/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 309.5557ms
+2023-12-18 22:23:54.530 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7216/api/Auth/Registrarse application/json 110
+2023-12-18 22:23:54.787 -03:00 [INF] Executing endpoint 'Lisit.Api.Controllers.AuthController.Registrarse (Lisit.Api)'
+2023-12-18 22:23:54.854 -03:00 [INF] Route matched with {action = "Registrarse", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Registrarse(Lisit.Api.ViewModel.Auth.RegistrarRequest) on controller Lisit.Api.Controllers.AuthController (Lisit.Api).
+2023-12-18 22:26:29.217 -03:00 [INF] User profile is available. Using 'C:\Users\vhspi\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-12-18 22:26:29.761 -03:00 [INF] Now listening on: https://localhost:7216
+2023-12-18 22:26:29.764 -03:00 [INF] Now listening on: http://localhost:5216
+2023-12-18 22:26:29.773 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-12-18 22:26:29.775 -03:00 [INF] Hosting environment: Development
+2023-12-18 22:26:29.778 -03:00 [INF] Content root path: C:\vhspiceros\github\prueba-tecnica-lisit\Lisit.Api\
+2023-12-18 22:26:31.607 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7216/swagger/index.html - -
+2023-12-18 22:26:32.520 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7216/swagger/index.html - - - 200 - text/html;charset=utf-8 921.4978ms
+2023-12-18 22:26:32.565 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7216/_vs/browserLink - -
+2023-12-18 22:26:32.566 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7216/_framework/aspnetcore-browser-refresh.js - -
+2023-12-18 22:26:32.582 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7216/_framework/aspnetcore-browser-refresh.js - - - 200 11988 application/javascript;+charset=utf-8 15.9557ms
+2023-12-18 22:26:32.624 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7216/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 59.1863ms
+2023-12-18 22:26:32.762 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7216/swagger/v1/swagger.json - -
+2023-12-18 22:26:33.178 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7216/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 415.6855ms
+2023-12-18 22:26:37.899 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7216/api/Auth/Registrarse application/json 113
+2023-12-18 22:26:38.118 -03:00 [INF] Executing endpoint 'Lisit.Api.Controllers.AuthController.Registrarse (Lisit.Api)'
+2023-12-18 22:26:38.208 -03:00 [INF] Route matched with {action = "Registrarse", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Registrarse(Lisit.Api.ViewModel.Auth.RegistrarRequest) on controller Lisit.Api.Controllers.AuthController (Lisit.Api).
+2023-12-18 22:28:37.457 -03:00 [INF] User profile is available. Using 'C:\Users\vhspi\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-12-18 22:28:38.008 -03:00 [INF] Now listening on: https://localhost:7216
+2023-12-18 22:28:38.011 -03:00 [INF] Now listening on: http://localhost:5216
+2023-12-18 22:28:38.019 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-12-18 22:28:38.022 -03:00 [INF] Hosting environment: Development
+2023-12-18 22:28:38.023 -03:00 [INF] Content root path: C:\vhspiceros\github\prueba-tecnica-lisit\Lisit.Api\
+2023-12-18 22:28:38.783 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7216/swagger/index.html - -
+2023-12-18 22:28:39.742 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7216/swagger/index.html - - - 200 - text/html;charset=utf-8 970.7663ms
+2023-12-18 22:28:39.790 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7216/_vs/browserLink - -
+2023-12-18 22:28:39.790 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7216/_framework/aspnetcore-browser-refresh.js - -
+2023-12-18 22:28:39.855 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7216/_framework/aspnetcore-browser-refresh.js - - - 200 11988 application/javascript;+charset=utf-8 65.0585ms
+2023-12-18 22:28:39.925 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7216/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 135.5594ms
+2023-12-18 22:28:40.204 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7216/swagger/v1/swagger.json - -
+2023-12-18 22:28:40.602 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7216/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 397.6914ms
+2023-12-18 22:28:45.989 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7216/api/Auth/Registrarse application/json 113
+2023-12-18 22:28:46.160 -03:00 [INF] Executing endpoint 'Lisit.Api.Controllers.AuthController.Registrarse (Lisit.Api)'
+2023-12-18 22:28:46.254 -03:00 [INF] Route matched with {action = "Registrarse", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Registrarse(Lisit.Api.ViewModel.Auth.RegistrarRequest) on controller Lisit.Api.Controllers.AuthController (Lisit.Api).
+2023-12-18 22:28:57.772 -03:00 [INF] Executed action Lisit.Api.Controllers.AuthController.Registrarse (Lisit.Api) in 11507.3988ms
+2023-12-18 22:28:57.788 -03:00 [INF] Executed endpoint 'Lisit.Api.Controllers.AuthController.Registrarse (Lisit.Api)'
+2023-12-18 22:28:57.803 -03:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 19: 'FOREIGN KEY constraint failed'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteScalar()
+   at System.Data.Common.DbCommand.ExecuteScalarAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.ExecuteScalarImplAsync[T](IDbConnection cnn, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 1241
+   at Lisit.Repositories.SqlLiteRepositories.UsuarioRepository.Create(Usuario usuario) in C:\vhspiceros\github\prueba-tecnica-lisit\Lisit.Repositories\SqlLiteRepositories\UsuarioRepository.cs:line 14
+   at Lisit.Services.AuthServices.Registrar(Usuario usuario) in C:\vhspiceros\github\prueba-tecnica-lisit\Lisit.Services\AuthServices.cs:line 26
+   at Lisit.Api.Controllers.AuthController.Registrarse(RegistrarRequest request) in C:\vhspiceros\github\prueba-tecnica-lisit\Lisit.Api\Controllers\AuthController.cs:line 58
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-12-18 22:28:58.029 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7216/api/Auth/Registrarse application/json 113 - 500 - text/plain;+charset=utf-8 12039.5786ms
+2023-12-18 22:29:04.482 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7216/api/Auth/Registrarse application/json 113
+2023-12-18 22:29:04.487 -03:00 [INF] Executing endpoint 'Lisit.Api.Controllers.AuthController.Registrarse (Lisit.Api)'
+2023-12-18 22:29:04.492 -03:00 [INF] Route matched with {action = "Registrarse", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Registrarse(Lisit.Api.ViewModel.Auth.RegistrarRequest) on controller Lisit.Api.Controllers.AuthController (Lisit.Api).
+2023-12-18 22:29:04.537 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Int32'.
+2023-12-18 22:29:04.562 -03:00 [INF] Executed action Lisit.Api.Controllers.AuthController.Registrarse (Lisit.Api) in 62.619ms
+2023-12-18 22:29:04.570 -03:00 [INF] Executed endpoint 'Lisit.Api.Controllers.AuthController.Registrarse (Lisit.Api)'
+2023-12-18 22:29:04.574 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7216/api/Auth/Registrarse application/json 113 - 200 - application/json;+charset=utf-8 91.7314ms
+2023-12-18 22:29:08.285 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7216/api/Auth/Registrarse application/json 113
+2023-12-18 22:29:08.293 -03:00 [INF] Executing endpoint 'Lisit.Api.Controllers.AuthController.Registrarse (Lisit.Api)'
+2023-12-18 22:29:08.296 -03:00 [INF] Route matched with {action = "Registrarse", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Registrarse(Lisit.Api.ViewModel.Auth.RegistrarRequest) on controller Lisit.Api.Controllers.AuthController (Lisit.Api).
+2023-12-18 22:29:08.310 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Int32'.
+2023-12-18 22:29:08.313 -03:00 [INF] Executed action Lisit.Api.Controllers.AuthController.Registrarse (Lisit.Api) in 11.337ms
+2023-12-18 22:29:08.316 -03:00 [INF] Executed endpoint 'Lisit.Api.Controllers.AuthController.Registrarse (Lisit.Api)'
+2023-12-18 22:29:08.319 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7216/api/Auth/Registrarse application/json 113 - 200 - application/json;+charset=utf-8 33.5814ms

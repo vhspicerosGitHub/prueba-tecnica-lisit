@@ -5,7 +5,8 @@ using System.Text;
 using Lisit.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
-using Lisit.Api.ViewModel;
+using Lisit.Api.ViewModel.Auth;
+using Lisit.Models;
 
 namespace Lisit.Api.Controllers;
 
@@ -26,7 +27,7 @@ public class AuthController : ControllerBase {
 
 
     [HttpPost("Login")]
-    public async Task<IActionResult> Post([FromBody] LoginRequest request) {
+    public async Task<IActionResult> Login([FromBody] LoginRequest request) {
         try {
             var user = await _authService.Login(request.Email, request.Password); // Lanza una Excepcion en caso no logearse
             if (user == null)
@@ -50,6 +51,18 @@ public class AuthController : ControllerBase {
             _logger.LogError(e, e.Message);
             throw e;
         }
+    }
+
+    [HttpPost("Registrarse")]
+    public async Task<IActionResult> Registrarse([FromBody] RegistrarRequest request) {
+        var fop = await _authService.Registrar(new Usuario {
+            Nombre = request.Nombre,
+            Email = request.Email,
+            Password = request.Password,
+            EsAdministrador = request.EsAdministrador,
+            ComunaId = request.ComunaId
+        });
+        return Ok(fop);
     }
 }
 

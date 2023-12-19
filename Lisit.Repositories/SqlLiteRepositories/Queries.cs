@@ -9,7 +9,7 @@ internal class Queries {
 
         public static readonly string Create = $@"
                             INSERT INTO {table} (nombre) VALUES (@nombre);
-                            SELECT last_insert_roTYwid();";
+                            SELECT last_insert_rowid();";
 
         public static readonly string Delete = $"delete from {table} WHERE id = @id";
 
@@ -58,6 +58,7 @@ internal class Queries {
 
         public static readonly string GetByEmail = $"select id,nombre,email, password,es_administrador as EsAdministrator, comuna_id as comunaId from {table} where email=@email ";
 
-        public static readonly string Create = $"select id,nombre,email, password,es_adminitrador from {table} where id=@id ";
+        public static readonly string Create = $@"insert into {table} (nombre,email,password,es_administrador,comuna_id) values (@nombre,@email,@password,@esAdministrador,@comunaId);
+                                SELECT last_insert_rowid();";
     }
 }

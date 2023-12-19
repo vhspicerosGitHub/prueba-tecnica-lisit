@@ -22,7 +22,14 @@ public class AuthServices : IAuthServices {
 
     }
 
-    public Task<int> Registrar(Usuario usuario) {
-        throw new NotImplementedException();
+    public async Task<int> Registrar(Usuario usuario) {
+        var c = await _repository.GetByEmail(usuario.Email);
+        if (c != null)
+            throw new BusinessException("Ya existe un usuario con ese correo");
+
+        if (!c.Email.IsEmailValid())
+            throw new BusinessException("El correo es Invalido");
+
+        return await _repository.Create(usuario);
     }
 }
