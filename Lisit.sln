@@ -5,19 +5,21 @@ VisualStudioVersion = 17.3.32811.315
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{F9449418-2FBC-4E2D-84FB-8261CBFDE86D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lisit.Models", "Lisit.Model\Lisit.Models.csproj", "{ACB60341-CC2B-4F8F-8BED-486F97B6090C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lisit.Models", "Lisit.Model\Lisit.Models.csproj", "{ACB60341-CC2B-4F8F-8BED-486F97B6090C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lisit.Services", "Lisit.Services\Lisit.Services.csproj", "{735231AA-323A-4AD3-A8EE-486F43A02FA6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lisit.Services", "Lisit.Services\Lisit.Services.csproj", "{735231AA-323A-4AD3-A8EE-486F43A02FA6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lisit.Repositories", "Lisit.Repositories\Lisit.Repositories.csproj", "{42CB3246-A42F-470F-A1CA-0121C2D254C2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lisit.Repositories", "Lisit.Repositories\Lisit.Repositories.csproj", "{42CB3246-A42F-470F-A1CA-0121C2D254C2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lisit.Api", "Lisit.Api\Lisit.Api.csproj", "{4FBF6863-8257-4D2D-B669-D2960A48EFD8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lisit.Api", "Lisit.Api\Lisit.Api.csproj", "{4FBF6863-8257-4D2D-B669-D2960A48EFD8}"
 	ProjectSection(ProjectDependencies) = postProject
 		{735231AA-323A-4AD3-A8EE-486F43A02FA6} = {735231AA-323A-4AD3-A8EE-486F43A02FA6}
 		{ACB60341-CC2B-4F8F-8BED-486F97B6090C} = {ACB60341-CC2B-4F8F-8BED-486F97B6090C}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lisit.Common", "Lisit.Common\Lisit.Common.csproj", "{38F2BD33-DC23-4F80-862E-28F409B9A997}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lisit.Common", "Lisit.Common\Lisit.Common.csproj", "{38F2BD33-DC23-4F80-862E-28F409B9A997}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lisit.Tests", "Lisit.Tests\Lisit.Tests.csproj", "{DF2F1090-0998-429D-A788-80E2A17BD8A3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,9 +47,16 @@ Global
 		{38F2BD33-DC23-4F80-862E-28F409B9A997}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{38F2BD33-DC23-4F80-862E-28F409B9A997}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{38F2BD33-DC23-4F80-862E-28F409B9A997}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF2F1090-0998-429D-A788-80E2A17BD8A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF2F1090-0998-429D-A788-80E2A17BD8A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF2F1090-0998-429D-A788-80E2A17BD8A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF2F1090-0998-429D-A788-80E2A17BD8A3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DF2F1090-0998-429D-A788-80E2A17BD8A3} = {F9449418-2FBC-4E2D-84FB-8261CBFDE86D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {41863A12-17E2-4AA1-A400-DB2899394B7B}
