@@ -4,9 +4,9 @@ internal class Queries {
 
         private static readonly string table = "Usuarios";
 
-        public static readonly string GetById = $"select id,nombre,email, password,es_administrador as EsAdministrator, comuna_id as comunaId from {table} where id=@id ";
+        public static readonly string GetById = $"select id,nombre,email, password,es_administrador as EsAdministrador, comuna_id as comunaId from {table} where id=@id ";
 
-        public static readonly string GetByEmail = $"select id,nombre,email, password,es_administrador as EsAdministrator, comuna_id as comunaId from {table} where email=@email ";
+        public static readonly string GetByEmail = $"select id,nombre,email, password,es_administrador as EsAdministrador, comuna_id as comunaId from {table} where email=@email ";
 
         public static readonly string Create = $@"insert into {table} (nombre,email,password,es_administrador,comuna_id) values (@nombre,@email,@password,@esAdministrador,@comunaId);
                                 SELECT last_insert_rowid();";

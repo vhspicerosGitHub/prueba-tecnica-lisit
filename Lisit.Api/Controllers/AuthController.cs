@@ -44,6 +44,7 @@ public class AuthController : ControllerBase {
 
             Sectoken.Payload.AddClaim(new Claim(ClaimTypes.Name, request.Email));
             Sectoken.Payload.AddClaim(new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()));
+            Sectoken.Payload.AddClaim(new Claim(ClaimTypes.Role, Convert.ToInt16(user.EsAdministrador).ToString()));
 
             var token = new JwtSecurityTokenHandler().WriteToken(Sectoken);
             return Ok(token);

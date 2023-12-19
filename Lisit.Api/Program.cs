@@ -1,4 +1,5 @@
 ﻿using System.Text;
+using Lisit.Api.Filters;
 using Lisit.Repositories.Interfaces;
 using Lisit.Repositories.Interfaces.Localizacion;
 using Lisit.Repositories.SqlLiteRepositories;
@@ -60,6 +61,11 @@ try {
     builder.Services.AddTransient<IComunaServices, ComunaServices>();
     builder.Services.AddTransient<IAuthServices, AuthServices>();
     builder.Services.AddTransient<IAyudaSocialServices, AyudaSocialServices>();
+
+
+    // Filtros para Autotizacion
+    builder.Services.AddScoped<AdministradorAuthorization>();
+    builder.Services.AddScoped<UsuarioAuthorization>();
 
     var app = builder.Build();
 
