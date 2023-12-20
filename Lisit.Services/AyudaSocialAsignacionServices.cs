@@ -13,7 +13,7 @@ namespace Lisit.Services {
         public async Task<int> Crear(AyudaSocialAsignacion asignacion) {
 
             var a = await _repository.ObtieneAsignaciones(asignacion.ResidenteId, asignacion.AyudaSocialId, asignacion.AñoAsignacion);
-            if (!a.Any()) {
+            if (a.Any()) {
                 throw new BusinessException("Ya tiene una asignacion el mismo año");
             }
 

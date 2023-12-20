@@ -1,5 +1,4 @@
-﻿using System.Threading.Tasks;
-using Lisit.Models;
+﻿using Lisit.Models;
 
 namespace Lisit.Repositories.Interfaces {
     public interface IAyudaSocialAsignacionRepository {
