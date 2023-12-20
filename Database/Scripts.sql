@@ -2,6 +2,11 @@
 DROP TABLE IF EXISTS comunas;
 DROP TABLE IF EXISTS Regiones;
 DROP TABLE IF EXISTS paises;
+DROP TABLE IF EXISTS usuarios;
+DROP TABLE IF EXISTS ayuda_social;
+DROP TABLE IF EXISTS ayuda_social_asignacion;
+DROP TABLE IF EXISTS negocio_log;
+
 
 -- TABLAS
 CREATE TABLE IF NOT EXISTS Paises(
@@ -36,7 +41,9 @@ CREATE TABLE IF NOT EXISTS  Usuarios(
 CREATE TABLE IF NOT EXISTS  ayuda_social(
   id    INTEGER PRIMARY KEY AUTOINCREMENT, 
   nombre   TEXT, 
-  descripcion   TEXT
+  descripcion   TEXT,
+  comuna_id INTEGER,
+  FOREIGN KEY(comuna_id) REFERENCES Comunas(id)
 );
 
 CREATE TABLE IF NOT EXISTS  ayuda_social_asignacion(
@@ -48,6 +55,15 @@ CREATE TABLE IF NOT EXISTS  ayuda_social_asignacion(
   FOREIGN KEY(ayuda_social_id) REFERENCES ayuda_social(id)
   FOREIGN KEY(usuario_id) REFERENCES Usuarios(id)
 );
+
+CREATE TABLE IF NOT EXISTS  negocio_log(
+  id                INTEGER PRIMARY KEY AUTOINCREMENT, 
+  usuario_id        INTEGER,
+  accion            TEXT,
+  fecha_accion    INTEGER,
+  FOREIGN KEY(usuario_id) REFERENCES Usuarios(id)
+);
+
 
 -- INSERT
 insert into paises (nombre) values('Chile');
