@@ -39,6 +39,15 @@ CREATE TABLE IF NOT EXISTS  ayuda_social(
   descripcion   TEXT
 );
 
+CREATE TABLE IF NOT EXISTS  ayuda_social_asignacion(
+  id                INTEGER PRIMARY KEY AUTOINCREMENT, 
+  ayuda_social_id   INTEGER, 
+  usuario_id        INTEGER,
+  [year]            INTEGER,
+  fecha_creacion    INTEGER,
+  FOREIGN KEY(ayuda_social_id) REFERENCES ayuda_social(id)
+  FOREIGN KEY(usuario_id) REFERENCES Usuarios(id)
+);
 
 -- INSERT
 insert into paises (nombre) values('Chile');
