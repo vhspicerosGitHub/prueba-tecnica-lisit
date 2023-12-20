@@ -15,6 +15,6 @@ public class AyudaSocialRepository : Base.BaseRepository, IAyudaSocialRepository
 
     public async Task CrearPorRegion(int regionId, AyudaSocial ayudaSocial) {
         await GetConnection().ExecuteScalarAsync<int>(Queries.AyudaSocial.CreateByRegion,
-            new { regionId = regionId, nombre = ayudaSocial.Nombre, descripcion = ayudaSocial.Descripcion, comunaId = ayudaSocial.ComunaId });
+            new { regionId, nombre = ayudaSocial.Nombre, descripcion = ayudaSocial.Descripcion, comunaId = ayudaSocial.ComunaId });
     }
 }

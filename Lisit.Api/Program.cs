@@ -3,12 +3,16 @@ using System.Text;
 using Lisit.Api.Filters;
 using Lisit.Repositories.Interfaces;
 using Lisit.Repositories.Interfaces.Localizacion;
+using Lisit.Repositories.Interfaces.Reportes;
 using Lisit.Repositories.SqlLiteRepositories;
 using Lisit.Repositories.SqlLiteRepositories.Localizacion;
+using Lisit.Repositories.SqlLiteRepositories.Reportes;
 using Lisit.Services;
 using Lisit.Services.Interfaces;
 using Lisit.Services.Interfaces.Localizacion;
+using Lisit.Services.Interfaces.Reportes;
 using Lisit.Services.Localizacion;
+using Lisit.Services.Reportes;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
@@ -77,15 +81,16 @@ try {
     builder.Services.AddTransient<IUsuarioRepository, UsuarioRepository>();
     builder.Services.AddTransient<IAyudaSocialRepository, AyudaSocialRepository>();
     builder.Services.AddTransient<IAyudaSocialAsignacionRepository, AyudaSocialAsignacionRepository>();
+    builder.Services.AddTransient<IReportesRepository, ReportesRepository>();
 
-
-    //  services
+    //  Services
     builder.Services.AddTransient<IPaisServices, PaisServices>();
     builder.Services.AddTransient<IRegionServices, RegionServices>();
     builder.Services.AddTransient<IComunaServices, ComunaServices>();
     builder.Services.AddTransient<IAuthServices, AuthServices>();
     builder.Services.AddTransient<IAyudaSocialServices, AyudaSocialServices>();
     builder.Services.AddTransient<IAyudaSocialAsignacionServices, AyudaSocialAsignacionServices>();
+    builder.Services.AddTransient<IReportesServices, ReportesServices>();
 
     // Filtros para Autotizacion
     builder.Services.AddScoped<AdministradorAuthorization>();

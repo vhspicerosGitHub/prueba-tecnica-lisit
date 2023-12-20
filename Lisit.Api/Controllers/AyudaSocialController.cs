@@ -28,7 +28,7 @@ public class AyudaSocialController : ControllerBase {
     /// <param name="request"></param>
     /// <returns></returns>
     [ServiceFilter(typeof(AdministradorAuthorization))]
-    [HttpPost("Create")]
+    [HttpPost]
     public async Task<IActionResult> CreateByComuna([FromBody] AyudaSocialPorComuna request) {
         var id = await _services.Crear(new Models.AyudaSocial {
             Nombre = request.Nombre,
