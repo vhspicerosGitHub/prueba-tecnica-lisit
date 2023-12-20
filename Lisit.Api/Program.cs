@@ -76,6 +76,7 @@ try {
     builder.Services.AddTransient<IRegionRepository, RegionRepository>();
     builder.Services.AddTransient<IUsuarioRepository, UsuarioRepository>();
     builder.Services.AddTransient<IAyudaSocialRepository, AyudaSocialRepository>();
+    builder.Services.AddTransient<IAyudaSocialAsignacionRepository, AyudaSocialAsignacionRepository>();
 
 
     //  services
@@ -84,7 +85,7 @@ try {
     builder.Services.AddTransient<IComunaServices, ComunaServices>();
     builder.Services.AddTransient<IAuthServices, AuthServices>();
     builder.Services.AddTransient<IAyudaSocialServices, AyudaSocialServices>();
-
+    builder.Services.AddTransient<IAyudaSocialAsignacionServices, AyudaSocialAsignacionServices>();
 
     // Filtros para Autotizacion
     builder.Services.AddScoped<AdministradorAuthorization>();

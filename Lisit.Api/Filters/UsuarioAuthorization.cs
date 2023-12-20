@@ -6,10 +6,8 @@ using Lisit.Models;
 namespace Lisit.Api.Filters {
     public class UsuarioAuthorization : Attribute, IAuthorizationFilter {
         public void OnAuthorization(AuthorizationFilterContext context) {
-            // Your custom authorization logic here
-
             var user = context.HttpContext.User;
-            if (!IsAuthorized(context.HttpContext.User)) {
+            if (!IsAuthorized(user)) {
                 new AuthenticationException("Unauthorized");
             }
         }

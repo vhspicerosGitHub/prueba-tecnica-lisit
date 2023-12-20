@@ -6,13 +6,13 @@ using Lisit.Models;
 namespace Lisit.Api.Filters {
     public class AdministradorAuthorization : Attribute, IAuthorizationFilter {
         public void OnAuthorization(AuthorizationFilterContext context) {
-            // Your custom authorization logic here
 
             var user = context.HttpContext.User;
-            if (!IsAuthorized(context.HttpContext.User)) {
+            if (!IsAuthorized(user)) {
                 throw new AuthenticationException("Unauthorized");
             }
         }
+
         private bool IsAuthorized(ClaimsPrincipal user) {
             if (!user.Identity.IsAuthenticated)
                 return false;

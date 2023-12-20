@@ -29,4 +29,16 @@ SELECT @nombre,@descripcion,id
 FROM   comunas
 where region_id = @regionId";
     }
+
+    internal class AyudaSocialAsignacion {
+        private static readonly string table = "ayuda_social_asignacion";
+
+        public static readonly string Create = $@"insert into {table} (usuario_id,ayuda_social_id,year,fecha_creacion) values (@usuarioId,@ayudaId,@year,DATETIME('now','localtime'));
+                                SELECT last_insert_rowid();";
+
+        public static readonly string ObtieneAsignacion = $@"SELECT id, usuario_id,ayuda_social_id,year,fecha_creacion 
+                                                                FROM {table}
+                                                                WHERE usuario_id = @usuarioId and ayuda_social_id = @ayudaId and year = @year ";
+    }
+
 }
