@@ -1,4 +1,4 @@
-﻿namespace Lisit.Tests; 
+﻿namespace Lisit.Tests;
 public class AsignacionTest {
 
     private AyudaSocialAsignacionServices _service;
@@ -54,4 +54,5 @@ public class AsignacionTest {
         _repository.VerifyNoOtherCalls();
 
     }
+
 }

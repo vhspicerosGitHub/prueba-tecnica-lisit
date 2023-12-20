@@ -27,7 +27,7 @@ public class AuthServices : IAuthServices {
         if (c != null)
             throw new BusinessException("Ya existe un usuario con ese correo");
 
-        if (!c.Email.IsEmailValid())
+        if (!usuario.Email.IsEmailValid())
             throw new BusinessException("El correo es Invalido");
 
         return await _repository.Create(usuario);
