@@ -11,7 +11,7 @@ public class AuthServices : IAuthServices {
         _repository = repository;
     }
 
-    public async Task<Usuario> Login(string email, string password) {
+    public async Task<Usuario> Login(string? email, string? password) {
         var user = await _repository.GetByEmail(email);
         if (user == null)
             throw new BusinessException("User not found");

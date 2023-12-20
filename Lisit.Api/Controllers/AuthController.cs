@@ -10,6 +10,9 @@ using Microsoft.IdentityModel.Tokens;
 
 namespace Lisit.Api.Controllers;
 
+/// <summary>
+/// Servicio de autenticacion
+/// </summary>
 [Route("api/[controller]")]
 [ApiController]
 public class AuthController : ControllerBase {
@@ -25,7 +28,12 @@ public class AuthController : ControllerBase {
 
     }
 
-
+    /// <summary>
+    /// Login
+    /// </summary>
+    /// <param name="request"></param>
+    /// <returns></returns>
+    /// <exception cref="BusinessException"></exception>
     [HttpPost("Login")]
     public async Task<IActionResult> Login([FromBody] LoginRequest request) {
         try {
@@ -54,6 +62,11 @@ public class AuthController : ControllerBase {
         }
     }
 
+    /// <summary>
+    /// Registra un usuario/vecino
+    /// </summary>
+    /// <param name="request"></param>
+    /// <returns></returns>
     [HttpPost("Registrarse")]
     public async Task<IActionResult> Registrarse([FromBody] RegistrarRequest request) {
         var fop = await _authService.Registrar(new Usuario {

@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System.Reflection;
+using System.Text;
 using Lisit.Api.Filters;
 using Lisit.Repositories.Interfaces;
 using Lisit.Repositories.Interfaces.Localizacion;
@@ -10,6 +11,7 @@ using Lisit.Services.Interfaces.Localizacion;
 using Lisit.Services.Localizacion;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
 using Serilog;
 
 try {
@@ -45,7 +47,28 @@ try {
 
     // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
     builder.Services.AddEndpointsApiExplorer();
-    builder.Services.AddSwaggerGen();
+    //builder.Services.AddSwaggerGen();
+
+    builder.Services.AddSwaggerGen(c => {
+        c.SwaggerDoc("v1", new OpenApiInfo {
+            Title = "API",
+            Description = "",
+            Contact = new OpenApiContact {
+                Name = "Víctor Hugo Saavedra",
+                Email = "vhspiceros@gmail.com",
+                Url = new Uri("https://github.com/vhspicerosGitHub")
+            },
+            License = new OpenApiLicense {
+                Name = "MIT License",
+                Url = new Uri("https://opensource.org/licenses/MIT")
+            }
+        });
+
+        // generate the XML docs that'll drive the swagger docs
+        var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+        var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+        c.IncludeXmlComments(xmlPath);
+    });
 
     //  Repositories
     builder.Services.AddTransient<IPaisRepository, PaisRepository>();

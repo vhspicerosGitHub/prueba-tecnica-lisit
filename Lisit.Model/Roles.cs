@@ -1,6 +1,4 @@
-﻿using System.Diagnostics.CodeAnalysis;
-
-namespace Lisit.Models;
+﻿namespace Lisit.Models;
 
 public enum Roles : ushort {
     Usuario = 0,

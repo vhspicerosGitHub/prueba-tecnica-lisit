@@ -4,6 +4,9 @@ using Lisit.Services.Interfaces.Localizacion;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Lisit.Api.Controllers.Localizacion;
+/// <summary>
+/// Servicio de Localizacion (Pais)
+/// </summary>
 [Route("api/[controller]")]
 [ApiController]
 public class PaisController : ControllerBase {
@@ -16,6 +19,10 @@ public class PaisController : ControllerBase {
     }
 
 
+    /// <summary>
+    /// Obtiene todos los paises
+    /// </summary>
+    /// <returns></returns>
     [ServiceFilter(typeof(UsuarioAuthorization))]
     [HttpGet()]
     [ProducesResponseType(typeof(IEnumerable<Pais>), 200)]
@@ -23,6 +30,11 @@ public class PaisController : ControllerBase {
         return Ok(await _service.GetAll());
     }
 
+    /// <summary>
+    /// Obtiene un pais por ID
+    /// </summary>
+    /// <param name="id"></param>
+    /// <returns></returns>
     [ServiceFilter(typeof(UsuarioAuthorization))]
     [HttpGet("{id:int}")]
     [ProducesResponseType(typeof(Pais), 200)]
@@ -30,6 +42,11 @@ public class PaisController : ControllerBase {
         return Ok(await _service.GetById(id));
     }
 
+    /// <summary>
+    /// Crea un pais
+    /// </summary>
+    /// <param name="pais"></param>
+    /// <returns></returns>
     [ServiceFilter(typeof(AdministradorAuthorization))]
     [HttpPost()]
     [ProducesResponseType(typeof(int), 200)]
@@ -37,6 +54,11 @@ public class PaisController : ControllerBase {
         return Ok(await _service.Create(pais));
     }
 
+    /// <summary>
+    /// Elimina un pais
+    /// </summary>
+    /// <param name="id"></param>
+    /// <returns></returns>
     [ServiceFilter(typeof(AdministradorAuthorization))]
     [HttpDelete("{id:int}")]
     public async Task<IActionResult> Delete(int id) {
@@ -44,6 +66,11 @@ public class PaisController : ControllerBase {
         return Ok();
     }
 
+    /// <summary>
+    /// Actualiza un pais
+    /// </summary>
+    /// <param name="pais"></param>
+    /// <returns></returns>
     [ServiceFilter(typeof(AdministradorAuthorization))]
     [HttpPut("{id:int}")]
     public async Task<IActionResult> Update(Pais pais) {
