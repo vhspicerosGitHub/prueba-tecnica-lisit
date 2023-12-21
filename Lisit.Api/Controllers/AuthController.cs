@@ -1,6 +1,7 @@
 ﻿using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
+using Lisit.Api.Filters;
 using Lisit.Api.ViewModel.Auth;
 using Lisit.Common;
 using Lisit.Models;
@@ -77,6 +78,17 @@ public class AuthController : ControllerBase {
             ComunaId = request.ComunaId
         });
         return Ok(fop);
+    }
+
+    /// <summary>
+    /// obtiene todos los usuarios del sistema
+    /// </summary>
+    /// <returns></returns>
+    [ServiceFilter(typeof(AdministradorAuthorization))]
+    [HttpGet("All")]
+    public async Task<IActionResult> All() {
+        var l = await _authService.GetAll();
+        return Ok(l);
     }
 }
 

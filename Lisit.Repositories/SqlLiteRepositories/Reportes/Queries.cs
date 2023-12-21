@@ -20,7 +20,7 @@ FROM ayuda_social_asignacion asa
 
             public static readonly string GetByUserAndYear = $"{baseQuery} WHERE u.id = @idUsuario and asa.[year] = @year";
 
-            public static readonly string GetByYear = $"{baseQuery} WHERE  ayuda_social_asignacion.year = @year";
+            public static readonly string GetByYear = $"{baseQuery} WHERE  asa.[year] = @year";
         }
     }
 }

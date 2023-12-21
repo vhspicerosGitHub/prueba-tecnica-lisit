@@ -7,4 +7,6 @@ public interface IUsuarioRepository {
     public Task<Usuario?> GetByEmail(string email);
 
     public Task<int> Create(Usuario usuario);
+
+    Task<IEnumerable<Usuario>> GetAll();
 }

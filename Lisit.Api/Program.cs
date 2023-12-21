@@ -75,22 +75,25 @@ try {
     });
 
     //  Repositories
-    builder.Services.AddTransient<IPaisRepository, PaisRepository>();
-    builder.Services.AddTransient<IComunaRepository, ComunaRepository>();
-    builder.Services.AddTransient<IRegionRepository, RegionRepository>();
-    builder.Services.AddTransient<IUsuarioRepository, UsuarioRepository>();
-    builder.Services.AddTransient<IAyudaSocialRepository, AyudaSocialRepository>();
-    builder.Services.AddTransient<IAyudaSocialAsignacionRepository, AyudaSocialAsignacionRepository>();
-    builder.Services.AddTransient<IReportesRepository, ReportesRepository>();
+    builder.Services.AddScoped<IPaisRepository, PaisRepository>();
+    builder.Services.AddScoped<IComunaRepository, ComunaRepository>();
+    builder.Services.AddScoped<IRegionRepository, RegionRepository>();
+    builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
+    builder.Services.AddScoped<IAyudaSocialRepository, AyudaSocialRepository>();
+    builder.Services.AddScoped<IAyudaSocialAsignacionRepository, AyudaSocialAsignacionRepository>();
+    builder.Services.AddScoped<IReportesRepository, ReportesRepository>();
+    builder.Services.AddScoped<ILogNegocioRepository, LogNegocioRepository>();
+
 
     //  Services
-    builder.Services.AddTransient<IPaisServices, PaisServices>();
-    builder.Services.AddTransient<IRegionServices, RegionServices>();
-    builder.Services.AddTransient<IComunaServices, ComunaServices>();
-    builder.Services.AddTransient<IAuthServices, AuthServices>();
-    builder.Services.AddTransient<IAyudaSocialServices, AyudaSocialServices>();
-    builder.Services.AddTransient<IAyudaSocialAsignacionServices, AyudaSocialAsignacionServices>();
-    builder.Services.AddTransient<IReportesServices, ReportesServices>();
+    builder.Services.AddScoped<IPaisServices, PaisServices>();
+    builder.Services.AddScoped<IRegionServices, RegionServices>();
+    builder.Services.AddScoped<IComunaServices, ComunaServices>();
+    builder.Services.AddScoped<IAuthServices, AuthServices>();
+    builder.Services.AddScoped<IAyudaSocialServices, AyudaSocialServices>();
+    builder.Services.AddScoped<IAyudaSocialAsignacionServices, AyudaSocialAsignacionServices>();
+    builder.Services.AddScoped<IReportesServices, ReportesServices>();
+    builder.Services.AddScoped<ILogNegocioServices, LogNegocioServices>();
 
     // Filtros para Autotizacion
     builder.Services.AddScoped<AdministradorAuthorization>();

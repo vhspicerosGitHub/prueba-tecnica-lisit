@@ -12,6 +12,8 @@ internal class Queries {
 
         public static readonly string GetByEmail = $"select id,nombre,email, password,es_administrador as EsAdministrador, comuna_id as comunaId from {table} where UPPER(email) = UPPER(@email) ";
 
+        public static readonly string GetAll = $"select id,nombre,email, password,es_administrador as EsAdministrador, comuna_id as comunaId from {table}";
+
         public static readonly string Create = $@"insert into {table} (nombre,email,password,es_administrador,comuna_id) values (@nombre,@email,@password,@esAdministrador,@comunaId);
                                 SELECT last_insert_rowid();";
     }
@@ -40,5 +42,12 @@ where region_id = @regionId";
                                                                 FROM {table}
                                                                 WHERE usuario_id = @usuarioId and ayuda_social_id = @ayudaId and year = @year ";
     }
+    internal class LogNegocio {
+        private static readonly string table = "negocio_log";
 
+        public static readonly string Create = $@"insert into {table} (usuario_id,accion,fecha_accion) values (@usuarioId,@accion,DATETIME('now','localtime'));
+                                SELECT last_insert_rowid();";
+
+        public static readonly string GetAll = $@"select id, usuario_id as usuarioId, accion, fecha_Accion as fechaAccion from {table}";
+    }
 }

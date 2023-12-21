@@ -1,6 +1,6 @@
 ﻿using Lisit.Api.Filters;
 using Lisit.Models.Reportes;
-using Lisit.Services.Reportes;
+using Lisit.Services.Interfaces.Reportes;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Lisit.Api.Controllers.Reportes {
@@ -11,8 +11,8 @@ namespace Lisit.Api.Controllers.Reportes {
     [ApiController]
     public class ReporteController : ControllerBase {
         private readonly ILogger<ReporteController> _logger;
-        private readonly ReportesServices services;
-        public ReporteController(ILogger<ReporteController> logger, ReportesServices services) {
+        private readonly IReportesServices services;
+        public ReporteController(ILogger<ReporteController> logger, IReportesServices services) {
             _logger = logger;
             this.services = services;
         }
@@ -22,7 +22,7 @@ namespace Lisit.Api.Controllers.Reportes {
         /// </summary>
         /// <param name="idUsuario"></param>
         /// <returns></returns>
-        [ServiceFilter(typeof(UsuarioAuthorization))]
+        [ServiceFilter(typeof(AdministradorAuthorization))]
         [HttpGet("{idUSuario:int}")]
         [ProducesResponseType(typeof(IEnumerable<ReporteDetalle>), 200)]
         public async Task<IActionResult> ObtienePorUsuario([FromRoute] int idUsuario) {
@@ -36,11 +36,24 @@ namespace Lisit.Api.Controllers.Reportes {
         /// <param name="idUsuario"></param>
         /// <param name="año"></param>
         /// <returns></returns>
-        [ServiceFilter(typeof(UsuarioAuthorization))]
+        [ServiceFilter(typeof(AdministradorAuthorization))]
         [HttpGet("{idUSuario:int}/{año:int}")]
         [ProducesResponseType(typeof(IEnumerable<ReporteDetalle>), 200)]
         public async Task<IActionResult> ObtienePorUsuario([FromRoute] int idUsuario, [FromRoute] int año) {
             var l = await services.GetByUserAndYear(idUsuario, año);
+            return Ok(l);
+        }
+
+        /// <summary>
+        /// Obtiene todas ayudas sociales asignadas en un año (de todos los usuarios)
+        /// </summary>
+        /// <param name="año"></param>
+        /// <returns></returns>
+        [ServiceFilter(typeof(AdministradorAuthorization))]
+        [HttpGet("año/{año:int}")]
+        [ProducesResponseType(typeof(IEnumerable<ReporteDetalle>), 200)]
+        public async Task<IActionResult> ObtienePorAño([FromRoute] int año) {
+            var l = await services.GetByear(año);
             return Ok(l);
         }
     }

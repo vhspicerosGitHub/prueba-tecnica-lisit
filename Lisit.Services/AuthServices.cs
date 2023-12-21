@@ -11,6 +11,10 @@ public class AuthServices : IAuthServices {
         _repository = repository;
     }
 
+    public Task<IEnumerable<Usuario>> GetAll() {
+        return _repository.GetAll();
+    }
+
     public async Task<Usuario> Login(string? email, string? password) {
         var user = await _repository.GetByEmail(email);
         if (user == null)
@@ -32,4 +36,6 @@ public class AuthServices : IAuthServices {
 
         return await _repository.Create(usuario);
     }
+
+
 }

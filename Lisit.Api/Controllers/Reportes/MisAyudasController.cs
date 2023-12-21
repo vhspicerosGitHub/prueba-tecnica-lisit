@@ -1,6 +1,8 @@
 ﻿using System.Security.Claims;
 using Lisit.Api.Filters;
+using Lisit.Api.Utils;
 using Lisit.Models.Reportes;
+using Lisit.Services.Interfaces;
 using Lisit.Services.Interfaces.Reportes;
 using Microsoft.AspNetCore.Mvc;
 
@@ -13,15 +15,12 @@ namespace Lisit.Api.Controllers.Reportes {
     public class MisAyudasController : ControllerBase {
         private readonly ILogger<ReporteController> _logger;
         private readonly IReportesServices services;
-        public MisAyudasController(ILogger<ReporteController> logger, IReportesServices services) {
+        private readonly ILogNegocioServices logNegocioServices;
+
+        public MisAyudasController(ILogger<ReporteController> logger, IReportesServices services, ILogNegocioServices logNegocioServices) {
             _logger = logger;
             this.services = services;
-        }
-
-        private int GetConnectedUserID() {
-            var user = HttpContext.User;
-            var userId = Convert.ToInt16(user.Claims.ToList().FirstOrDefault(x => (x.Type == ClaimTypes.NameIdentifier)).Value);
-            return userId;
+            this.logNegocioServices = logNegocioServices;
         }
 
         /// <summary>
@@ -33,7 +32,8 @@ namespace Lisit.Api.Controllers.Reportes {
         [HttpGet("{año:int}")]
         [ProducesResponseType(typeof(IEnumerable<ReporteDetalle>), 200)]
         public async Task<IActionResult> MisAsignaciones([FromRoute] int año) {
-            var l = await services.GetByUserAndYear(GetConnectedUserID(), año);
+            await logNegocioServices.Create(new Models.LogNegocio { UsuarioId = HttpContext.GetConnectedUserId(), Accion = $"Consulta mis asignaciones para el año {año}" });
+            var l = await services.GetByUserAndYear(HttpContext.GetConnectedUserId(), año);
             return Ok(l);
         }
 
@@ -45,7 +45,8 @@ namespace Lisit.Api.Controllers.Reportes {
         [HttpGet]
         [ProducesResponseType(typeof(IEnumerable<ReporteDetalle>), 200)]
         public async Task<IActionResult> MisAsignacionesUltimoAño() {
-            var l = await services.GetByUserAndYear(GetConnectedUserID(), DateTime.Now.Year);
+            await logNegocioServices.Create(new Models.LogNegocio { UsuarioId = HttpContext.GetConnectedUserId(), Accion = $"Consulta mis asignaciones para el año actual" });
+            var l = await services.GetByUserAndYear(HttpContext.GetConnectedUserId(), DateTime.Now.Year);
             return Ok(l);
         }
     }

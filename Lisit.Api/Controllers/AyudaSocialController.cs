@@ -65,8 +65,5 @@ public class AyudaSocialController : ControllerBase {
         var id = await _asignacionServices.Crear(new Models.AyudaSocialAsignacion { ResidenteId = request.IdUsuario, AyudaSocialId = request.IdAyuda, AñoAsignacion = request.Año });
         return Ok(id);
     }
-
-
 }
-
 

@@ -23,4 +23,8 @@ public class UsuarioRepository : BaseRepository, IUsuarioRepository {
     public async Task<Usuario?> GetById(int id) {
         return await GetConnection().QueryFirstOrDefaultAsync<Usuario>(Queries.usuarios.GetById, new { id });
     }
+
+    public async Task<IEnumerable<Usuario>> GetAll() {
+        return await GetConnection().QueryAsync<Usuario>(Queries.usuarios.GetAll, new { });
+    }
 }
